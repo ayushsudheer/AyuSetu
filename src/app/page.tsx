@@ -440,13 +440,13 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
   };
 
   return (
-    <main className="min-h-screen bg-[#eaeff7] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white pb-20">
+    <main className="min-h-screen bg-[#eaeff7] text-slate-800 antialiased selection:bg-emerald-500 selection:text-white pb-20">
       {/* ─── Top Enterprise Navigation Bar ───────────────────────────────── */}
       <header className="sticky top-0 z-40 bg-[#eaeff7]/85 backdrop-blur-md border-b border-white/60 shadow-sm transition-all">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           {/* Brand Logo & Tagline */}
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-purple-600 p-0.5 shadow-md shadow-indigo-300/40 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 via-emerald-700 to-teal-600 p-0.5 shadow-md shadow-emerald-300/40 flex items-center justify-center">
               <div className="w-full h-full bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
                 <Volume2 className="w-6 h-6 text-white stroke-[2.2]" />
               </div>
@@ -454,9 +454,9 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xl font-extrabold tracking-tight text-slate-900 font-sans">
-                  Bhasha<span className="text-indigo-600">Bridge</span>
+                  Bhasha<span className="text-emerald-600">Bridge</span>
                 </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-indigo-100/90 text-indigo-800 rounded-full border border-indigo-200">
+                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-emerald-100/90 text-emerald-800 rounded-full border border-emerald-200">
                   Sarvam AI
                 </span>
               </div>
@@ -475,9 +475,9 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
 
             <button
               onClick={() => setShowLanguages(!showLanguages)}
-              className="neu-btn px-3.5 py-2 text-xs font-semibold text-slate-700 flex items-center gap-1.5 hover:text-indigo-600"
+              className="neu-btn px-3.5 py-2 text-xs font-semibold text-slate-700 flex items-center gap-1.5 hover:text-emerald-600"
             >
-              <Languages className="w-4 h-4 text-indigo-600" />
+              <Languages className="w-4 h-4 text-emerald-600" />
               <span>22+ Languages</span>
               <ChevronDown
                 className={`w-3.5 h-3.5 text-slate-400 transition-transform ${showLanguages ? "rotate-180" : ""
@@ -493,7 +493,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
-                  <Languages className="w-4 h-4 text-indigo-600" /> Supported Indic Languages & Dialects
+                  <Languages className="w-4 h-4 text-emerald-600" /> Supported Indic Languages & Dialects
                 </span>
                 <span className="text-xs text-slate-500">
                   Auto-transcribed & translated via Sarvam Saaras v4
@@ -520,10 +520,10 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
         <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="text-left">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-indigo-100 shadow-sm text-xs font-semibold text-indigo-900 mb-6 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-indigo-600" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-emerald-100 shadow-sm text-xs font-semibold text-emerald-900 mb-6 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-emerald-600" />
               <span>AI-Powered Citizen Grievance Redressal for India</span>
-              <span className="text-indigo-300">•</span>
+              <span className="text-emerald-300">•</span>
               <span className="text-slate-600">Zero Signup Required</span>
             </div>
 
@@ -543,7 +543,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             {/* Quick Metrics Bar */}
             <div className="flex flex-wrap items-start justify-start gap-3 sm:gap-4 text-xs text-slate-600 font-semibold">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>22+ Scheduled Languages</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
@@ -565,7 +565,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             <div className="neu-flat-lg p-4 sm:p-5">
               <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-200/70">
                 <div>
-                  <div className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">Grievance Input</div>
+                  <div className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-600">Grievance Input</div>
                   <div className="text-sm font-bold text-slate-800">Raise complaint in 3 steps</div>
                 </div>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-emerald-700">
@@ -588,7 +588,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                       if (tab.key !== "presets") setSelectedPresetText(null);
                     }}
                     className={`flex-1 rounded-xl px-2.5 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all ${
-                      inputMode === tab.key ? "bg-white text-indigo-700 shadow-sm" : "text-slate-500"
+                      inputMode === tab.key ? "bg-white text-emerald-700 shadow-sm" : "text-slate-500"
                     }`}
                   >
                     {tab.label}
@@ -596,7 +596,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 ))}
               </div>
 
-              <div className="mt-4 rounded-[1.5rem] border border-indigo-100 bg-gradient-to-br from-white via-indigo-50/60 to-emerald-50/80 p-4 shadow-inner">
+              <div className="mt-4 rounded-[1.5rem] border border-emerald-100 bg-gradient-to-br from-white via-emerald-50/60 to-emerald-50/80 p-4 shadow-inner">
                 {inputMode === "record" && (
                   <div className="space-y-4">
                     <button
@@ -605,7 +605,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                       className={`mx-auto flex h-20 w-20 items-center justify-center rounded-full border-4 border-white text-white shadow-lg transition-all ${
                         isRecording
                           ? "bg-gradient-to-br from-rose-500 to-red-600 shadow-red-200"
-                          : "bg-gradient-to-br from-indigo-500 to-violet-600 shadow-indigo-200 hover:scale-[1.02]"
+                          : "bg-gradient-to-br from-emerald-500 to-teal-600 shadow-emerald-200 hover:scale-[1.02]"
                       }`}
                     >
                       <Mic className="h-8 w-8" />
@@ -625,8 +625,8 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
 
                 {inputMode === "upload" && (
                   <div className="space-y-3">
-                    <div className="rounded-2xl border border-dashed border-indigo-200 bg-white/80 p-4 text-center">
-                      <Upload className="mx-auto mb-2 h-6 w-6 text-indigo-600" />
+                    <div className="rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-4 text-center">
+                      <Upload className="mx-auto mb-2 h-6 w-6 text-emerald-600" />
                       <div className="text-sm font-bold text-slate-800">Upload voice note</div>
                       <div className="mt-1 text-[11px] text-slate-500">MP3, WAV, M4A or WebM</div>
                     </div>
@@ -649,12 +649,12 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                         onClick={() => setSelectedPresetText(scenario.text)}
                         className={`w-full rounded-2xl border p-3 text-left transition-all ${
                           selectedPresetText === scenario.text
-                            ? "border-indigo-200 bg-indigo-50"
-                            : "border-slate-200 bg-white/75 hover:border-indigo-200"
+                            ? "border-emerald-200 bg-emerald-50"
+                            : "border-slate-200 bg-white/75 hover:border-emerald-200"
                         }`}
                       >
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-indigo-600">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-emerald-600">
                             {scenario.scriptBadge}
                           </span>
                           <span className="text-[10px] text-slate-500">{scenario.language}</span>
@@ -680,7 +680,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 type="button"
                 onClick={() => triggerGeneration()}
                 disabled={isLoading}
-                className="mt-4 w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg shadow-indigo-200 disabled:opacity-60"
+                className="mt-4 w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg shadow-emerald-200 disabled:opacity-60"
               >
                 {isLoading ? "Generating..." : "Generate Complaint"}
               </button>
@@ -692,7 +692,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
       {/* ─── MNC-Grade 3-Step Visual Guide (How It Works Diagram) ─────────── */}
       <section className="px-4 sm:px-6 max-w-6xl mx-auto mb-14">
         <div className="text-center mb-8">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 block mb-1">
             Intuitive 3-Step Workflow
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -705,22 +705,22 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
           <div className="neu-flat p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="w-8 h-8 rounded-xl bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-indigo-300">
+                <span className="w-8 h-8 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-emerald-300">
                   01
                 </span>
-                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   Voice In
                 </span>
               </div>
 
               {/* Step 1 Visual Vector Diagram */}
-              <div className="h-32 rounded-2xl bg-gradient-to-b from-indigo-50/70 to-white/70 border border-indigo-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
+              <div className="h-32 rounded-2xl bg-gradient-to-b from-emerald-50/70 to-white/70 border border-emerald-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
                 {/* Visual Audio Waves and Speech bubbles */}
                 <div className="flex items-center gap-2">
                   <div className="px-2.5 py-1 rounded-lg bg-white shadow-sm border border-slate-200 text-xs font-bold text-slate-700">
                     नमस्ते
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-200 animate-pulse">
+                  <div className="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-lg shadow-emerald-200 animate-pulse">
                     <Mic className="w-6 h-6" />
                   </div>
                   <div className="px-2.5 py-1 rounded-lg bg-white shadow-sm border border-slate-200 text-xs font-bold text-slate-700">
@@ -729,11 +729,11 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 </div>
                 {/* Micro waveform overlay */}
                 <div className="absolute bottom-2 left-6 right-6 flex items-center justify-center gap-1 opacity-70">
-                  <span className="w-1 h-3 bg-indigo-400 rounded-full animate-pulse" />
-                  <span className="w-1 h-6 bg-indigo-600 rounded-full animate-pulse" />
-                  <span className="w-1 h-4 bg-indigo-500 rounded-full animate-pulse" />
-                  <span className="w-1 h-8 bg-indigo-700 rounded-full animate-pulse" />
-                  <span className="w-1 h-3 bg-indigo-400 rounded-full animate-pulse" />
+                  <span className="w-1 h-3 bg-emerald-400 rounded-full animate-pulse" />
+                  <span className="w-1 h-6 bg-emerald-600 rounded-full animate-pulse" />
+                  <span className="w-1 h-4 bg-emerald-500 rounded-full animate-pulse" />
+                  <span className="w-1 h-8 bg-emerald-700 rounded-full animate-pulse" />
+                  <span className="w-1 h-3 bg-emerald-400 rounded-full animate-pulse" />
                 </div>
               </div>
 
@@ -746,7 +746,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             </div>
 
             <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
-              <Headphones className="w-3.5 h-3.5 text-indigo-600" />
+              <Headphones className="w-3.5 h-3.5 text-emerald-600" />
               <span>Supports live mic & .wav / .mp3 uploads</span>
             </div>
           </div>
@@ -755,29 +755,29 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
           <div className="neu-flat p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-purple-300">
+                <span className="w-8 h-8 rounded-xl bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-teal-300">
                   02
                 </span>
-                <span className="text-[11px] font-bold text-purple-700 bg-purple-50 border border-purple-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-teal-700 bg-teal-50 border border-teal-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   AI Translation & Reasoning
                 </span>
               </div>
 
               {/* Step 2 Visual Vector Diagram */}
-              <div className="h-32 rounded-2xl bg-gradient-to-b from-purple-50/70 to-white/70 border border-purple-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
+              <div className="h-32 rounded-2xl bg-gradient-to-b from-teal-50/70 to-white/70 border border-teal-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
                 <div className="flex items-center gap-3">
                   <div className="text-center">
-                    <div className="px-2 py-1 rounded bg-white shadow-xs border border-purple-200 text-[11px] font-bold text-purple-900">
+                    <div className="px-2 py-1 rounded bg-white shadow-xs border border-teal-200 text-[11px] font-bold text-teal-900">
                       Saaras v4
                     </div>
                     <span className="text-[9px] text-slate-500 font-medium">Translate STT</span>
                   </div>
                   <div className="flex flex-col items-center">
-                    <Sparkles className="w-5 h-5 text-purple-600 animate-spin" />
-                    <ArrowRight className="w-4 h-4 text-purple-400 mt-0.5" />
+                    <Sparkles className="w-5 h-5 text-teal-600 animate-spin" />
+                    <ArrowRight className="w-4 h-4 text-teal-400 mt-0.5" />
                   </div>
                   <div className="text-center">
-                    <div className="px-2 py-1 rounded bg-purple-600 text-white shadow-xs text-[11px] font-bold">
+                    <div className="px-2 py-1 rounded bg-teal-600 text-white shadow-xs text-[11px] font-bold">
                       Sarvam 105B
                     </div>
                     <span className="text-[9px] text-slate-500 font-medium">Legal Reasoning</span>
@@ -794,7 +794,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             </div>
 
             <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
-              <Scale className="w-3.5 h-3.5 text-purple-600" />
+              <Scale className="w-3.5 h-3.5 text-teal-600" />
               <span>Preserves dates, monetary damages & facts</span>
             </div>
           </div>
@@ -844,7 +844,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
       <section className="px-4 sm:px-6 max-w-5xl mx-auto mb-14">
         <div className="neu-flat p-6 sm:p-8 rounded-3xl">
           <div className="text-center mb-6">
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-600 block mb-1">
               Transforming Citizen Grievances
             </span>
             <h3 className="text-lg sm:text-2xl font-bold text-slate-900">
@@ -878,14 +878,14 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             </div>
 
             {/* The BhashaBridge Way */}
-            <div className="p-5 rounded-2xl bg-indigo-50/90 border border-indigo-200/90 shadow-sm">
+            <div className="p-5 rounded-2xl bg-emerald-50/90 border border-emerald-200/90 shadow-sm">
               <div className="flex items-center gap-2 mb-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                <h4 className="text-sm font-bold text-indigo-950">
+                <h4 className="text-sm font-bold text-emerald-950">
                   With BhashaBridge (Sarvam AI)
                 </h4>
               </div>
-              <ul className="text-xs text-indigo-950/80 space-y-2.5 font-medium">
+              <ul className="text-xs text-emerald-950/80 space-y-2.5 font-medium">
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 font-bold">✓</span>
                   <span>Speak naturally in 22+ Indic languages (Hindi, Marathi, Bengali, Tamil, etc.).</span>
@@ -974,8 +974,8 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                   className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center transition-all ${isRecording
                     ? "bg-gradient-to-tr from-rose-500 to-red-600 text-white shadow-xl shadow-red-200 scale-105"
                     : audioBlob
-                      ? "neu-btn text-indigo-600 hover:scale-105"
-                      : "neu-btn text-indigo-600 hover:scale-105"
+                      ? "neu-btn text-emerald-600 hover:scale-105"
+                      : "neu-btn text-emerald-600 hover:scale-105"
                     }`}
                   aria-label={isRecording ? "Stop recording" : "Start recording"}
                 >
@@ -1015,7 +1015,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                       <button
                         type="button"
                         onClick={toggleAudioPlayback}
-                        className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-md hover:bg-indigo-700 transition-colors"
+                        className="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition-colors"
                       >
                         {isPlayingAudio ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
                       </button>
@@ -1078,9 +1078,9 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
               {!uploadedFile ? (
                 <div
                   onClick={() => fileInputRef.current?.click()}
-                  className="neu-inset p-8 text-center cursor-pointer hover:border-indigo-300 transition-all group"
+                  className="neu-inset p-8 text-center cursor-pointer hover:border-emerald-300 transition-all group"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
                     <Upload className="w-8 h-8" />
                   </div>
                   <h4 className="text-sm font-bold text-slate-800 mb-1">
@@ -1089,7 +1089,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                   <p className="text-xs text-slate-500 mb-3">
                     Supports .wav, .mp3, .m4a, .ogg, or .flac (Max file size: 10MB)
                   </p>
-                  <div className="inline-block px-3 py-1 rounded-lg bg-white/80 border border-slate-200 text-[11px] font-semibold text-indigo-700">
+                  <div className="inline-block px-3 py-1 rounded-lg bg-white/80 border border-slate-200 text-[11px] font-semibold text-emerald-700">
                     Browse Local Audio File
                   </div>
                 </div>
@@ -1100,7 +1100,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                       <button
                         type="button"
                         onClick={toggleAudioPlayback}
-                        className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-md hover:bg-indigo-700 transition-colors"
+                        className="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition-colors"
                       >
                         {isPlayingAudio ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
                       </button>
@@ -1163,17 +1163,17 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                       key={scenario.title}
                       onClick={() => setSelectedPresetText(scenario.text)}
                       className={`p-4 rounded-2xl cursor-pointer text-left transition-all ${isSelected
-                        ? "bg-indigo-50/90 border-2 border-indigo-600 shadow-sm"
-                        : "neu-flat hover:border-indigo-200"
+                        ? "bg-emerald-50/90 border-2 border-emerald-600 shadow-sm"
+                        : "neu-flat hover:border-emerald-200"
                         }`}
                     >
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="text-xs font-bold text-slate-900">{scenario.title}</span>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800">
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
                           {scenario.scriptBadge}
                         </span>
                       </div>
-                      <div className="text-[11px] font-semibold text-indigo-700 mb-2">
+                      <div className="text-[11px] font-semibold text-emerald-700 mb-2">
                         {scenario.subtitle}
                       </div>
                       <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed font-normal">
@@ -1187,7 +1187,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
               {selectedPresetText && (
                 <div className="space-y-3">
                   <div className="neu-inset p-3 text-left text-xs text-slate-700 leading-relaxed font-normal">
-                    <span className="font-bold text-indigo-900 block mb-1">Selected Narrative:</span>
+                    <span className="font-bold text-emerald-900 block mb-1">Selected Narrative:</span>
                     {selectedPresetText}
                   </div>
 
@@ -1220,7 +1220,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
           {isLoading && (
             <div className="mt-6 p-6 rounded-2xl neu-inset text-center space-y-4 animate-fade-in">
               <div className="flex justify-center">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-200 animate-spin">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-lg shadow-emerald-200 animate-spin">
                   <RefreshCw className="w-6 h-6" />
                 </div>
               </div>
@@ -1244,17 +1244,17 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
               {/* Progress Stepper Dots */}
               <div className="flex items-center justify-center gap-3 pt-2">
                 <span
-                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 1 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 1 ? "bg-emerald-600 ring-4 ring-emerald-100" : "bg-slate-300"
                     }`}
                 />
                 <span className="w-8 h-0.5 bg-slate-300" />
                 <span
-                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 2 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 2 ? "bg-emerald-600 ring-4 ring-emerald-100" : "bg-slate-300"
                     }`}
                 />
                 <span className="w-8 h-0.5 bg-slate-300" />
                 <span
-                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 3 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 3 ? "bg-emerald-600 ring-4 ring-emerald-100" : "bg-slate-300"
                     }`}
                 />
               </div>
@@ -1266,7 +1266,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
       {/* ─── RESULT DOCUMENT SECTION ─────────────────────────────────────── */}
       {result && (
         <section ref={resultsRef} className="px-4 sm:px-6 max-w-4xl mx-auto mb-16 animate-fade-in">
-          <div className="neu-flat-lg p-6 sm:p-10 border-2 border-indigo-200/80">
+          <div className="neu-flat-lg p-6 sm:p-10 border-2 border-emerald-200/80">
             {/* Top Toolbar */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
               <div className="flex items-center gap-3">
@@ -1283,7 +1283,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                     </span>
                   </div>
                   <p className="text-xs text-slate-500 font-medium">
-                    Language: <span className="font-semibold text-indigo-700">{result.detectedLanguage}</span> • Generated via Sarvam AI
+                    Language: <span className="font-semibold text-emerald-700">{result.detectedLanguage}</span> • Generated via Sarvam AI
                   </p>
                 </div>
               </div>
@@ -1315,12 +1315,12 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
             {activeTab === "complaint" && (
               <div className="py-6 space-y-6">
                 {/* Meta details strip */}
-                <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-indigo-50/70 border border-indigo-100/80">
+                <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100/80">
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                       Category:
                     </span>
-                    <span className="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-bold text-xs shadow-xs">
+                    <span className="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-bold text-xs shadow-xs">
                       {result.complaint.category}
                     </span>
                   </div>
@@ -1342,13 +1342,13 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 {/* Subject Line */}
                 <div className="neu-inset p-4 sm:p-5 text-left">
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700">
                       Formal Subject Line
                     </span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(result.complaint.subject, "subject")}
-                      className="text-xs text-slate-500 hover:text-indigo-600 font-semibold flex items-center gap-1"
+                      className="text-xs text-slate-500 hover:text-emerald-600 font-semibold flex items-center gap-1"
                     >
                       {copiedSection === "subject" ? (
                         <>
@@ -1369,13 +1369,13 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 {/* Statement of Grievance Narrative */}
                 <div className="neu-inset p-5 sm:p-7 text-left space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-slate-200/80">
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700">
                       Statement of Grievance & Incident Narrative
                     </span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(result.complaint.description, "desc")}
-                      className="text-xs text-slate-500 hover:text-indigo-600 font-semibold flex items-center gap-1"
+                      className="text-xs text-slate-500 hover:text-emerald-600 font-semibold flex items-center gap-1"
                     >
                       {copiedSection === "desc" ? (
                         <>
@@ -1394,24 +1394,24 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 </div>
 
                 {/* Recommended Next Action & Escalation Directory */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-indigo-50/90 border border-indigo-200/90 text-left flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-indigo-300">
+                <div className="p-5 sm:p-6 rounded-2xl bg-emerald-50/90 border border-emerald-200/90 text-left flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-emerald-300">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1.5">
-                      <h4 className="text-xs font-bold text-indigo-950 uppercase tracking-wider">
+                      <h4 className="text-xs font-bold text-emerald-950 uppercase tracking-wider">
                         Recommended Filing Route & Next Actions
                       </h4>
                       <button
                         type="button"
                         onClick={() => copyToClipboard(result.complaint.suggestedNextAction, "action")}
-                        className="text-xs text-indigo-700 hover:underline font-bold flex items-center gap-1"
+                        className="text-xs text-emerald-700 hover:underline font-bold flex items-center gap-1"
                       >
                         {copiedSection === "action" ? "Copied" : "Copy"}
                       </button>
                     </div>
-                    <p className="text-xs sm:text-sm text-indigo-950/85 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-emerald-950/85 leading-relaxed font-normal">
                       {result.complaint.suggestedNextAction}
                     </p>
                   </div>
@@ -1423,7 +1423,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                     <button
                       type="button"
                       onClick={copyFullComplaint}
-                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-emerald-600"
                     >
                       {copiedSection === "full" ? (
                         <>
@@ -1431,7 +1431,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                         </>
                       ) : (
                         <>
-                          <Copy className="w-4 h-4 text-indigo-600" /> Copy Full Text
+                          <Copy className="w-4 h-4 text-emerald-600" /> Copy Full Text
                         </>
                       )}
                     </button>
@@ -1439,9 +1439,9 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                     <button
                       type="button"
                       onClick={downloadAsTxt}
-                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-emerald-600"
                     >
-                      <Download className="w-4 h-4 text-indigo-600" /> Download .TXT
+                      <Download className="w-4 h-4 text-emerald-600" /> Download .TXT
                     </button>
 
                     <button
@@ -1455,9 +1455,9 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                     <button
                       type="button"
                       onClick={printComplaint}
-                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-emerald-600"
                     >
-                      <Printer className="w-4 h-4 text-indigo-600" /> Print / PDF
+                      <Printer className="w-4 h-4 text-emerald-600" /> Print / PDF
                     </button>
                   </div>
 
@@ -1485,10 +1485,10 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="neu-inset p-5">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700">
                         Original Speech Transcript
                       </span>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">
                         {result.detectedLanguage}
                       </span>
                     </div>
@@ -1499,10 +1499,10 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
 
                   <div className="neu-inset p-5">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700">
                         Saaras v4 English Translation
                       </span>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">
                         Translate Mode
                       </span>
                     </div>
@@ -1524,7 +1524,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
       {/* ─── Official Grievance Portals Directory ────────────────────────── */}
       <section className="px-4 sm:px-6 max-w-6xl mx-auto mb-16">
         <div className="text-center mb-8">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 block mb-1">
             Where to Submit Your Grievance
           </span>
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
@@ -1545,10 +1545,10 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
               className="neu-flat p-5 rounded-2xl block text-left group hover:-translate-y-1 transition-all"
             >
               <div className="flex items-center justify-between mb-2">
-                <Building2 className="w-5 h-5 text-indigo-600" />
-                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+                <Building2 className="w-5 h-5 text-emerald-600" />
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-600 transition-colors" />
               </div>
-              <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-1">
+              <h4 className="text-xs font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-1">
                 {portal.name}
               </h4>
               <p className="text-[11px] text-slate-500 leading-relaxed">
@@ -1563,7 +1563,7 @@ _Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 border-t border-slate-200/80 text-center text-xs text-slate-500">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
           <div className="flex items-center gap-2">
-            <Volume2 className="w-4 h-4 text-indigo-600" />
+            <Volume2 className="w-4 h-4 text-emerald-600" />
             <span className="font-bold text-slate-800">BhashaBridge</span>
             <span>• Empowering Indian Citizens Through Voice AI</span>
           </div>
