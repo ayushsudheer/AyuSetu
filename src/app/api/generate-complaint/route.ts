@@ -111,16 +111,13 @@ function getValidAudioConfig(originalType: string, originalName: string) {
 
 export async function POST(req: NextRequest) {
   try {
-    const apiKey =
-      process.env.SARVAM_API_KEY ||
-      process.env.NEXT_PUBLIC_SARVAM_API_KEY ||
-      "sk_r2ewccoa_LIsAmFwF0G0ZPplSPWdn65Hd";
+    const apiKey = process.env.SARVAM_API_KEY;
 
     if (!apiKey) {
       return NextResponse.json(
         {
           error:
-            "SARVAM_API_KEY is not configured on the server. Please add it to your environment variables.",
+            "SARVAM_API_KEY is not configured in Vercel environment variables. Please add it to your Project Settings > Environment Variables.",
         },
         { status: 500 }
       );
