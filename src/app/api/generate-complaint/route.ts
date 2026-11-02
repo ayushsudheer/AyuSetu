@@ -33,6 +33,82 @@ function cleanJson(text: string): ComplaintResponse {
   }
 }
 
+function getValidAudioConfig(originalType: string, originalName: string) {
+  // Strip any codec or parameter flags like ';codecs=opus'
+  const rawType = (originalType || "").split(";")[0].trim().toLowerCase();
+
+  const allowedTypes = [
+    "audio/mpeg",
+    "audio/mp3",
+    "audio/mpeg3",
+    "audio/x-mpeg-3",
+    "audio/x-mp3",
+    "audio/wav",
+    "audio/x-wav",
+    "audio/wave",
+    "audio/pcm_s16le",
+    "audio/l16",
+    "audio/raw",
+    "application/octet-stream",
+    "audio/aac",
+    "audio/x-aac",
+    "audio/aiff",
+    "audio/x-aiff",
+    "audio/ogg",
+    "audio/opus",
+    "audio/flac",
+    "audio/x-flac",
+    "audio/mp4",
+    "audio/x-m4a",
+    "audio/amr",
+    "audio/x-ms-wma",
+    "audio/webm",
+    "video/webm",
+  ];
+
+  let contentType = "audio/wav";
+  let ext = "wav";
+
+  if (allowedTypes.includes(rawType)) {
+    contentType = rawType;
+    if (rawType.includes("webm")) ext = "webm";
+    else if (rawType.includes("mp4") || rawType.includes("m4a")) ext = "mp4";
+    else if (rawType.includes("ogg") || rawType.includes("opus")) ext = "ogg";
+    else if (rawType.includes("mp3") || rawType.includes("mpeg")) ext = "mp3";
+    else if (rawType.includes("flac")) ext = "flac";
+    else if (rawType.includes("wav")) ext = "wav";
+  } else {
+    // Map inferred types
+    if (rawType.includes("webm")) {
+      contentType = "audio/webm";
+      ext = "webm";
+    } else if (rawType.includes("mp4") || rawType.includes("m4a")) {
+      contentType = "audio/mp4";
+      ext = "mp4";
+    } else if (rawType.includes("ogg") || rawType.includes("opus")) {
+      contentType = "audio/ogg";
+      ext = "ogg";
+    } else if (rawType.includes("mp3") || rawType.includes("mpeg")) {
+      contentType = "audio/mp3";
+      ext = "mp3";
+    } else if (rawType.includes("flac")) {
+      contentType = "audio/flac";
+      ext = "flac";
+    } else {
+      contentType = "audio/wav";
+      ext = "wav";
+    }
+  }
+
+  let filename = originalName || `recording.${ext}`;
+  const currentExt = filename.split(".").pop()?.toLowerCase();
+  if (!currentExt || (currentExt === "wav" && ext !== "wav") || currentExt !== ext) {
+    filename = `recording.${ext}`;
+  }
+
+  return { contentType, filename };
+}
+
 export async function POST(req: NextRequest) {
   try {
     const apiKey =
@@ -74,11 +150,16 @@ export async function POST(req: NextRequest) {
       const arrayBuffer = await audioFile.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
 
-      // Determine uploadable object
+      // Normalize MIME type & filename for Sarvam AI
+      const { contentType, filename } = getValidAudioConfig(
+        audioFile.type,
+        audioFile.name
+      );
+
       const uploadable = {
         data: buffer,
-        filename: audioFile.name || "recording.wav",
-        contentType: audioFile.type || "audio/wav",
+        filename,
+        contentType,
       };
 
       // 1. Run translate mode to convert any Indic language speech to English

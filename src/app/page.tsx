@@ -282,8 +282,11 @@ export default function Home() {
     const formData = new FormData();
 
     if (inputMode === "record" && audioBlob) {
-      const ext = audioBlob.type.includes("mp4") ? "mp4" : "webm";
-      formData.append("audio", audioBlob, `recording.${ext}`);
+      const isMp4 = audioBlob.type.includes("mp4");
+      const cleanMime = isMp4 ? "audio/mp4" : "audio/webm";
+      const ext = isMp4 ? "mp4" : "webm";
+      const cleanBlob = new Blob([audioBlob], { type: cleanMime });
+      formData.append("audio", cleanBlob, `recording.${ext}`);
     } else if (inputMode === "upload" && uploadedFile) {
       formData.append("audio", uploadedFile);
     } else if (inputMode === "presets" || directTextOverride) {
