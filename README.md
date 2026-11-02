@@ -1,4 +1,4 @@
-# BhashaBridge – Speak Your Language, Be Understood
+# BhashaBridge – Speak Your Language, Be Understood, Complain 
 
 **BhashaBridge** is an AI-powered multilingual voice-to-complaint generator designed for Indian citizens. It empowers users to speak about civic, utility, or consumer grievances in their native tongue (Hindi, Marathi, Bengali, Tamil, Telugu, and 20+ Indic languages) and automatically transforms their spoken words into formal, highly structured, and actionable complaint letters ready for official submission.
 
