@@ -30,6 +30,9 @@ import {
   Headphones,
   CheckCircle2,
   Zap,
+  MessageCircle,
+  Share2,
+  XCircle,
 } from "lucide-react";
 
 interface ComplaintData {
@@ -418,6 +421,24 @@ Powered by Sarvam AI (Saaras v4 & 105B Indic LLM)`;
     window.print();
   };
 
+  const shareViaWhatsApp = () => {
+    if (!result) return;
+    const text = `*FORMAL CITIZEN GRIEVANCE PETITION*
+*Category:* ${result.complaint.category}
+*Subject:* ${result.complaint.subject}
+
+*Statement of Grievance:*
+${result.complaint.description}
+
+*Recommended Action & Authority:*
+${result.complaint.suggestedNextAction}
+
+_Generated via BhashaBridge (Sarvam AI Multilingual Grievance Engine)_`;
+
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <main className="min-h-screen bg-[#eaeff7] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white pb-20">
       {/* ─── Top Enterprise Navigation Bar ───────────────────────────────── */}
@@ -496,45 +517,173 @@ Powered by Sarvam AI (Saaras v4 & 105B Indic LLM)`;
 
       {/* ─── Hero Section with Visual Value Proposition ──────────────────── */}
       <section className="relative pt-12 pb-14 px-4 sm:px-6 overflow-hidden">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Top Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-indigo-100 shadow-sm text-xs font-semibold text-indigo-900 mb-6 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-indigo-600" />
-            <span>AI-Powered Citizen Grievance Redressal for India</span>
-            <span className="text-indigo-300">•</span>
-            <span className="text-slate-600">Zero Signup Required</span>
+        <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="text-left">
+            {/* Top Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-indigo-100 shadow-sm text-xs font-semibold text-indigo-900 mb-6 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-indigo-600" />
+              <span>AI-Powered Citizen Grievance Redressal for India</span>
+              <span className="text-indigo-300">•</span>
+              <span className="text-slate-600">Zero Signup Required</span>
+            </div>
+
+            {/* Hero Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[5.3rem] font-extrabold text-slate-900 tracking-[-0.06em] leading-[0.96] mb-5 font-sans">
+              Speak in your language. <br className="hidden sm:inline" />
+              <span className="gradient-text block mt-2">Be understood by authorities.</span>
+            </h1>
+
+            {/* Hero Subtitle */}
+            <p className="max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-8">
+              Bureaucratic petitions shouldn’t require legal jargon or fluent English. Simply record your voice in
+              <strong className="text-slate-800 font-semibold"> Hindi, Marathi, Bengali, Tamil</strong> or 20+ Indic languages. BhashaBridge translates and structures your complaint into a formal petition accepted by
+              <strong className="text-slate-800 font-semibold"> CPGRAMS, Consumer Forums & DISCOMs</strong>.
+            </p>
+
+            {/* Quick Metrics Bar */}
+            <div className="flex flex-wrap items-start justify-start gap-3 sm:gap-4 text-xs text-slate-600 font-semibold">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+                <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                <span>22+ Scheduled Languages</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <span>100% Client-Side Privacy</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+                <Zap className="w-4 h-4 text-amber-500" />
+                <span>Instant Legal Structuring (&lt;15s)</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+                <Building2 className="w-4 h-4 text-blue-600" />
+                <span>CPGRAMS & Ombudsman Ready</span>
+              </div>
+            </div>
           </div>
 
-          {/* Hero Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-5 font-sans">
-            Speak in your language. <br className="hidden sm:inline" />
-            <span className="gradient-text">Be understood by authorities.</span>
-          </h1>
+          <div className="relative">
+            <div className="neu-flat-lg p-4 sm:p-5">
+              <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-200/70">
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">Grievance Input</div>
+                  <div className="text-sm font-bold text-slate-800">Raise complaint in 3 steps</div>
+                </div>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-emerald-700">
+                  <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
+                  Ready
+                </span>
+              </div>
 
-          {/* Hero Subtitle */}
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-8">
-            Bureaucratic petitions shouldn’t require legal jargon or fluent English. Simply record your voice in
-            <strong className="text-slate-800 font-semibold"> Hindi, Marathi, Bengali, Tamil</strong> or 20+ Indic languages. BhashaBridge translates and structures your complaint into a formal petition accepted by
-            <strong className="text-slate-800 font-semibold"> CPGRAMS, Consumer Forums & DISCOMs</strong>.
-          </p>
+              <div className="mt-4 neu-inset-sm p-1.5 flex items-center gap-1">
+                {[
+                  { key: "record", label: "Record" },
+                  { key: "upload", label: "Upload" },
+                  { key: "presets", label: "Samples" },
+                ].map((tab) => (
+                  <button
+                    key={tab.key}
+                    type="button"
+                    onClick={() => {
+                      setInputMode(tab.key as "record" | "upload" | "presets");
+                      if (tab.key !== "presets") setSelectedPresetText(null);
+                    }}
+                    className={`flex-1 rounded-xl px-2.5 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all ${
+                      inputMode === tab.key ? "bg-white text-indigo-700 shadow-sm" : "text-slate-500"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
 
-          {/* Quick Metrics Bar */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-600 font-semibold">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
-              <CheckCircle2 className="w-4 h-4 text-indigo-600" />
-              <span>22+ Scheduled Languages</span>
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>100% Client-Side Privacy</span>
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
-              <Zap className="w-4 h-4 text-amber-500" />
-              <span>Instant Legal Structuring (&lt;15s)</span>
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
-              <Building2 className="w-4 h-4 text-blue-600" />
-              <span>CPGRAMS & Ombudsman Ready</span>
+              <div className="mt-4 rounded-[1.5rem] border border-indigo-100 bg-gradient-to-br from-white via-indigo-50/60 to-emerald-50/80 p-4 shadow-inner">
+                {inputMode === "record" && (
+                  <div className="space-y-4">
+                    <button
+                      type="button"
+                      onClick={isRecording ? stopRecording : startRecording}
+                      className={`mx-auto flex h-20 w-20 items-center justify-center rounded-full border-4 border-white text-white shadow-lg transition-all ${
+                        isRecording
+                          ? "bg-gradient-to-br from-rose-500 to-red-600 shadow-red-200"
+                          : "bg-gradient-to-br from-indigo-500 to-violet-600 shadow-indigo-200 hover:scale-[1.02]"
+                      }`}
+                    >
+                      <Mic className="h-8 w-8" />
+                    </button>
+                    <div className="text-center text-xs text-slate-600">
+                      {isRecording ? (
+                        <div className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1.5 font-semibold text-red-700">
+                          <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
+                          Recording 00:{recordingTime < 10 ? `0${recordingTime}` : recordingTime}
+                        </div>
+                      ) : (
+                        <span>Speak naturally in Hindi, Marathi or Tamil</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {inputMode === "upload" && (
+                  <div className="space-y-3">
+                    <div className="rounded-2xl border border-dashed border-indigo-200 bg-white/80 p-4 text-center">
+                      <Upload className="mx-auto mb-2 h-6 w-6 text-indigo-600" />
+                      <div className="text-sm font-bold text-slate-800">Upload voice note</div>
+                      <div className="mt-1 text-[11px] text-slate-500">MP3, WAV, M4A or WebM</div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="w-full rounded-xl bg-slate-900 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white"
+                    >
+                      Choose file
+                    </button>
+                  </div>
+                )}
+
+                {inputMode === "presets" && (
+                  <div className="space-y-3">
+                    {SAMPLE_SCENARIOS.slice(0, 2).map((scenario) => (
+                      <button
+                        key={scenario.title}
+                        type="button"
+                        onClick={() => setSelectedPresetText(scenario.text)}
+                        className={`w-full rounded-2xl border p-3 text-left transition-all ${
+                          selectedPresetText === scenario.text
+                            ? "border-indigo-200 bg-indigo-50"
+                            : "border-slate-200 bg-white/75 hover:border-indigo-200"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-indigo-600">
+                            {scenario.scriptBadge}
+                          </span>
+                          <span className="text-[10px] text-slate-500">{scenario.language}</span>
+                        </div>
+                        <div className="mt-2 text-xs font-semibold text-slate-800">{scenario.subtitle}</div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-slate-200 bg-white/80 p-3 shadow-sm">
+                <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+                  <span>Complaint Summary</span>
+                  <span className="rounded-full bg-emerald-50 px-2 py-1 text-emerald-700">Ready</span>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-700">
+                  {selectedPresetText || "My electricity meter is running fast and the bill is unusually high. Please inspect and resolve this immediately."}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => triggerGeneration()}
+                disabled={isLoading}
+                className="mt-4 w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg shadow-indigo-200 disabled:opacity-60"
+              >
+                {isLoading ? "Generating..." : "Generate Complaint"}
+              </button>
             </div>
           </div>
         </div>
@@ -686,6 +835,70 @@ Powered by Sarvam AI (Saaras v4 & 105B Indic LLM)`;
             <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
               <span>One-click Copy, .txt Download & Print</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Before vs. After Visual Comparison ──────────────────────────── */}
+      <section className="px-4 sm:px-6 max-w-5xl mx-auto mb-14">
+        <div className="neu-flat p-6 sm:p-8 rounded-3xl">
+          <div className="text-center mb-6">
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+              Transforming Citizen Grievances
+            </span>
+            <h3 className="text-lg sm:text-2xl font-bold text-slate-900">
+              Why Traditional Complaints Get Rejected vs. BhashaBridge
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* The Old Way */}
+            <div className="neu-inset p-5 rounded-2xl border border-rose-200/50 bg-rose-50/30">
+              <div className="flex items-center gap-2 mb-3">
+                <XCircle className="w-5 h-5 text-rose-500" />
+                <h4 className="text-sm font-bold text-rose-900">
+                  Traditional Filing (Status Quo)
+                </h4>
+              </div>
+              <ul className="text-xs text-slate-600 space-y-2.5">
+                <li className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>Portals like CPGRAMS demand structured English summaries with specific legal heads.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>Dialect voice recordings or handwritten regional notes are often marked "incomplete" or "unclear".</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>Citizens spend ₹500–₹2,000 on middlemen or typists at local tehsil/court offices.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* The BhashaBridge Way */}
+            <div className="p-5 rounded-2xl bg-indigo-50/90 border border-indigo-200/90 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                <h4 className="text-sm font-bold text-indigo-950">
+                  With BhashaBridge (Sarvam AI)
+                </h4>
+              </div>
+              <ul className="text-xs text-indigo-950/80 space-y-2.5 font-medium">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 font-bold">✓</span>
+                  <span>Speak naturally in 22+ Indic languages (Hindi, Marathi, Bengali, Tamil, etc.).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 font-bold">✓</span>
+                  <span>Saaras v4 translates speech & Sarvam 105B structures facts, timeline & statutory grounds.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 font-bold">✓</span>
+                  <span>100% Free, instant (&lt;15s), copy or share directly to WhatsApp or government portals.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1233,10 +1446,18 @@ Powered by Sarvam AI (Saaras v4 & 105B Indic LLM)`;
 
                     <button
                       type="button"
+                      onClick={shareViaWhatsApp}
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-emerald-700 flex items-center gap-2 hover:bg-emerald-50"
+                    >
+                      <MessageCircle className="w-4 h-4 text-emerald-600" /> Share via WhatsApp
+                    </button>
+
+                    <button
+                      type="button"
                       onClick={printComplaint}
                       className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
                     >
-                      <Printer className="w-4 h-4 text-indigo-600" /> Print / Save PDF
+                      <Printer className="w-4 h-4 text-indigo-600" /> Print / PDF
                     </button>
                   </div>
 
