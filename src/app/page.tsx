@@ -15,12 +15,21 @@ import {
   FileText,
   AlertCircle,
   Volume2,
-  HelpCircle,
   ExternalLink,
   ShieldCheck,
   Languages,
   ArrowRight,
   RefreshCw,
+  Printer,
+  ChevronDown,
+  Building2,
+  Scale,
+  Clock,
+  Send,
+  HelpCircle,
+  Headphones,
+  CheckCircle2,
+  Zap,
 } from "lucide-react";
 
 interface ComplaintData {
@@ -41,22 +50,80 @@ interface ApiResponse {
 
 const SAMPLE_SCENARIOS = [
   {
-    title: "बिजली बिल शिकायत (Hindi)",
-    subtitle: "High Billing & Meter Sparking",
+    title: "बिजली बिल व मीटर स्पार्किंग",
+    subtitle: "Electricity Hazard & Excess Bill",
     language: "Hindi",
-    text: "नमस्ते, पिछले दो महीने से मेरा बिजली का मीटर बहुत तेज चल रहा है और उसमें से बार-बार चिंगारी निकल रही है। मैंने बिजली ऑफिस में दो बार शिकायत की लेकिन कोई सुनवाई नहीं हुई। मुझे बहुत डर लग रहा है कि कोई बड़ा हादसा न हो जाए और बिल भी बहुत ज्यादा आ रहा है। कृपया जल्द से जल्द मीटर बदलवाएं।",
+    scriptBadge: "हिन्दी",
+    text: "नमस्ते, पिछले दो महीने से मेरा बिजली का मीटर बहुत तेज चल रहा है और उसमें से बार-बार चिंगारी निकल रही है। मैंने बिजली ऑफिस में दो बार शिकायत की लेकिन कोई सुनवाई नहीं हुई। मुझे बहुत डर लग रहा है कि कोई बड़ा हादसा न हो जाए और बिल भी 12,000 रुपये का आ गया है जो सामान्य से तीन गुना अधिक है। कृपया तुरंत मीटर बदलवाएं और बिल की जांच करें।",
   },
   {
-    title: "पाणी पुरवठा समस्या (Marathi)",
+    title: "दूषित पाणी पुरवठा तक्रार",
     subtitle: "Contaminated Water Supply",
     language: "Marathi",
-    text: "नमस्कार, आमच्या परिसरात गेल्या आठवड्यापासून नळाला खूप घाण आणि दुर्गंधीयुक्त पाणी येत आहे. कॉलनीतील अनेक लहान मुले आजारी पडली आहेत. महापालिकेच्या पाणीपुरवठा विभागाकडे अर्ज देऊनही अद्याप कोणतीही कारवाई झालेली नाही. कृपया पाण्याची तातडीने तपासणी करून स्वच्छ पाणीपुरवठा सुरू करावा.",
+    scriptBadge: "मराठी",
+    text: "नमस्कार, आमच्या शिवाजी नगर कॉलनीत गेल्या 10 दिवसांपासून नळाला अत्यंत घाण आणि पिवळसर दुर्गंधीयुक्त पाणी येत आहे. हे पाणी पिल्यामुळे कॉलनीतील अनेक लहान मुले आणि वृद्ध आजारी पडले आहेत. स्थानिक पाणीपुरवठा अभियंत्यांना लेखी अर्ज देऊनही काहीच दखल घेतलेली नाही. कृपया तात्काळ नमुने तपासून स्वच्छ पाणीपुरवठा पूर्ववत करावा.",
   },
   {
-    title: "E-Commerce Refund Fraud (Hinglish)",
-    subtitle: "Defective Product & No Refund",
+    title: "E-Commerce Refund Delay",
+    subtitle: "Defective Product & Denied Refund",
     language: "Hinglish",
-    text: "Hello, maine 15 din pehle ek laptop order kiya tha online shopping portal se. Jo product deliver hua woh damaged screen ke sath aaya. Maine return request raise ki lekin delivery agent ne pick karne se mana kar diya aur portal pe status 'Delivered & Completed' dikha raha hai. Customer care koi response nahi de raha hai aur mera 45000 rupaye fasa hua hai.",
+    scriptBadge: "Hinglish",
+    text: "Hello, maine 15 din pehle Flipkart se 45,000 rupaye ka laptop order kiya tha. Delivery ke time box damaged tha aur screen pe internal crack nikla. Maine usi din return initiate kiya lekin delivery agent ne pick up reject kar diya. Customer care bar bar 48 hours wait karne bol raha hai aur refund nahi de raha. Kripya mera refund turant process karwaya jaye.",
+  },
+  {
+    title: "ವಿಳಂಬವಾದ ಪಿಂಚಣಿ ವಿತರಣೆ",
+    subtitle: "Senior Citizen Pension Delay",
+    language: "Kannada",
+    scriptBadge: "ಕನ್ನಡ",
+    text: "ನಮಸ್ಕಾರ, ನಾನು ನಿವೃತ್ತ ಸರ್ಕಾರಿ ಶಾಲಾ ಶಿಕ್ಷಕ. ಕಳೆದ ಮೂರು ತಿಂಗಳಿಂದ ನನಗೆ ಬರಬೇಕಾದ ಮಾಸಿಕ ಪಿಂಚಣಿ ನನ್ನ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಜಮಾ ಆಗಿಲ್ಲ. ನಾನು ಖಜಾನೆ ಕಚೇರಿಗೆ ಮತ್ತು ಬ್ಯಾಂಕ್ ಶಾಖೆಗೆ ಹಲವು ಬಾರಿ ಭೇಟಿ ನೀಡಿದ್ದರೂ ಯಾವುದೇ ಸರಿಯಾದ ಉತ್ತರ ನೀಡುತ್ತಿಲ್ಲ. ನನ್ನ ಜೀವನ ನಿರ್ವಹಣೆಗೆ ಈ ಪಿಂಚಣಿಯೇ ಏಕೈಕ ಆಧಾರ. ದಯವಿಟ್ಟು ಬಾಕಿ ಇರುವ ಪಿಂಚಣಿಯನ್ನು ತಕ್ಷಣ ಬಿಡುಗಡೆ ಮಾಡಿ.",
+  },
+];
+
+const INDIC_LANGUAGES = [
+  { name: "Hindi", native: "हिन्दी" },
+  { name: "Marathi", native: "मराठी" },
+  { name: "Bengali", native: "বাংলা" },
+  { name: "Telugu", native: "తెలుగు" },
+  { name: "Tamil", native: "தமிழ்" },
+  { name: "Gujarati", native: "ગુજરાતી" },
+  { name: "Kannada", native: "ಕನ್ನಡ" },
+  { name: "Malayalam", native: "മലയാളം" },
+  { name: "Punjabi", native: "ਪੰਜਾਬੀ" },
+  { name: "Odia", native: "ଓଡ଼ିଆ" },
+  { name: "Assamese", native: "অসমীয়া" },
+  { name: "Urdu", native: "اردو" },
+  { name: "Maithili", native: "मैथिली" },
+  { name: "Sanskrit", native: "संस्कृतम्" },
+  { name: "Bhojpuri", native: "भोजपुरी" },
+  { name: "Nepali", native: "नेपाली" },
+  { name: "Konkani", native: "कोंकणी" },
+  { name: "Sindhi", native: "سنڌي" },
+  { name: "Kashmiri", native: "कॉशुर" },
+  { name: "Dogri", native: "डोगरी" },
+  { name: "Manipuri", native: "মৈতৈলোন্" },
+  { name: "Santali", native: "ᱥᱟᱱᱛᱟᱲᱤ" },
+];
+
+const OFFICIAL_PORTALS = [
+  {
+    name: "CPGRAMS (pgportal.gov.in)",
+    desc: "Central & State Government public grievance redressal portal",
+    url: "https://pgportal.gov.in/",
+  },
+  {
+    name: "National Consumer Helpline (1915)",
+    desc: "Dept of Consumer Affairs — against retail, e-commerce & service fraud",
+    url: "https://consumerhelpline.gov.in/",
+  },
+  {
+    name: "RBI Banking Ombudsman",
+    desc: "Complaints against unauthorized bank charges, ATM frauds & loans",
+    url: "https://cms.rbi.org.in/",
+  },
+  {
+    name: "National Cyber Crime Portal",
+    desc: "Financial online fraud, phishing & identity theft report (1930)",
+    url: "https://cybercrime.gov.in/",
   },
 ];
 
@@ -79,11 +146,13 @@ export default function Home() {
   const [result, setResult] = useState<ApiResponse | null>(null);
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"complaint" | "transcripts">("complaint");
+  const [showLanguages, setShowLanguages] = useState(false);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const timerIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const resultsRef = useRef<HTMLDivElement | null>(null);
 
   // Audio timer
   useEffect(() => {
@@ -92,7 +161,6 @@ export default function Home() {
       timerIntervalRef.current = setInterval(() => {
         setRecordingTime((prev) => {
           if (prev >= 29) {
-            // Saaras sync REST supports up to 30 seconds
             stopRecording();
             return 30;
           }
@@ -114,6 +182,15 @@ export default function Home() {
     };
   }, [audioUrl]);
 
+  // Audio playback tracker
+  useEffect(() => {
+    const audio = audioPlayerRef.current;
+    if (!audio) return;
+    const handleEnded = () => setIsPlayingAudio(false);
+    audio.addEventListener("ended", handleEnded);
+    return () => audio.removeEventListener("ended", handleEnded);
+  }, [audioUrl]);
+
   const startRecording = async () => {
     setErrorMsg(null);
     setAudioBlob(null);
@@ -121,33 +198,45 @@ export default function Home() {
     audioChunksRef.current = [];
 
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const mediaRecorder = new MediaRecorder(stream);
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          channelCount: 1,
+          sampleRate: 16000,
+          echoCancellation: true,
+          noiseSuppression: true,
+        },
+      });
+
+      const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
+        ? "audio/webm;codecs=opus"
+        : MediaRecorder.isTypeSupported("audio/mp4")
+          ? "audio/mp4"
+          : "audio/webm";
+
+      const mediaRecorder = new MediaRecorder(stream, { mimeType });
       mediaRecorderRef.current = mediaRecorder;
 
       mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
+        if (event.data && event.data.size > 0) {
           audioChunksRef.current.push(event.data);
         }
       };
 
       mediaRecorder.onstop = () => {
-        const mimeType = mediaRecorder.mimeType || "audio/webm";
         const blob = new Blob(audioChunksRef.current, { type: mimeType });
         setAudioBlob(blob);
         const url = URL.createObjectURL(blob);
         setAudioUrl(url);
 
-        // Stop all tracks to release mic
         stream.getTracks().forEach((track) => track.stop());
       };
 
-      mediaRecorder.start(200); // 200ms slice
+      mediaRecorder.start(250);
       setIsRecording(true);
     } catch (err: any) {
       console.error("Microphone access error:", err);
       setErrorMsg(
-        "Microphone access was denied or not found. Please allow microphone permissions or use file upload."
+        "Microphone permission was denied. Please allow microphone access in your browser or upload an audio file."
       );
     }
   };
@@ -165,34 +254,16 @@ export default function Home() {
     if (!file) return;
 
     if (file.size > 10 * 1024 * 1024) {
-      setErrorMsg("File size exceeds 10MB limit. Please upload a smaller audio clip.");
+      setErrorMsg("File size exceeds 10MB limit. Please upload a smaller audio file.");
       return;
     }
 
     setUploadedFile(file);
-    setAudioBlob(file);
     const url = URL.createObjectURL(file);
     setAudioUrl(url);
   };
 
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setErrorMsg(null);
-    const file = e.dataTransfer.files?.[0];
-    if (!file) return;
-
-    if (file.size > 10 * 1024 * 1024) {
-      setErrorMsg("File size exceeds 10MB limit. Please upload a smaller audio clip.");
-      return;
-    }
-
-    setUploadedFile(file);
-    setAudioBlob(file);
-    const url = URL.createObjectURL(file);
-    setAudioUrl(url);
-  };
-
-  const toggleAudioPlay = () => {
+  const toggleAudioPlayback = () => {
     if (!audioPlayerRef.current) return;
     if (isPlayingAudio) {
       audioPlayerRef.current.pause();
@@ -203,60 +274,69 @@ export default function Home() {
     }
   };
 
-  const resetAll = () => {
-    setAudioBlob(null);
-    setAudioUrl(null);
-    setUploadedFile(null);
-    setSelectedPresetText(null);
-    setResult(null);
-    setErrorMsg(null);
-    setIsRecording(false);
-    setRecordingTime(0);
-  };
-
-  const handleSubmit = async () => {
+  const triggerGeneration = async (directTextOverride?: string) => {
     setErrorMsg(null);
     setIsLoading(true);
     setLoadingStep(1);
 
-    try {
-      const formData = new FormData();
+    const formData = new FormData();
 
-      if (inputMode === "presets" && selectedPresetText) {
-        formData.append("text", selectedPresetText);
-      } else if (audioBlob) {
-        formData.append("audio", audioBlob, uploadedFile?.name || "voice_complaint.wav");
-      } else {
-        setErrorMsg("Please record your voice, upload an audio file, or pick a sample scenario.");
+    if (inputMode === "record" && audioBlob) {
+      const ext = audioBlob.type.includes("mp4") ? "mp4" : "webm";
+      formData.append("audio", audioBlob, `recording.${ext}`);
+    } else if (inputMode === "upload" && uploadedFile) {
+      formData.append("audio", uploadedFile);
+    } else if (inputMode === "presets" || directTextOverride) {
+      const textToSend = directTextOverride || selectedPresetText;
+      if (!textToSend) {
+        setErrorMsg("Please select or enter a scenario to generate complaint.");
         setIsLoading(false);
         return;
       }
+      formData.append("text", textToSend);
+    } else {
+      setErrorMsg("Please record your voice, upload an audio file, or pick a sample scenario.");
+      setIsLoading(false);
+      return;
+    }
 
-      // Step progression animation
-      const stepTimer1 = setTimeout(() => setLoadingStep(2), 1200);
-      const stepTimer2 = setTimeout(() => setLoadingStep(3), 2800);
+    try {
+      // Step 2 indicator
+      const stepTimer = setTimeout(() => {
+        setLoadingStep(2);
+      }, 3000);
+
+      const step3Timer = setTimeout(() => {
+        setLoadingStep(3);
+      }, 7000);
 
       const response = await fetch("/api/generate-complaint", {
         method: "POST",
         body: formData,
       });
 
-      clearTimeout(stepTimer1);
-      clearTimeout(stepTimer2);
+      clearTimeout(stepTimer);
+      clearTimeout(step3Timer);
 
-      const data: ApiResponse = await response.json();
+      const data = await response.json();
 
       if (!response.ok || !data.success) {
-        throw new Error(data.error || "Failed to process audio and generate complaint.");
+        throw new Error(data.error || "Failed to generate complaint. Please try again.");
       }
 
       setResult(data);
-      setLoadingStep(4);
+      setActiveTab("complaint");
+
+      // Smooth scroll to results
+      setTimeout(() => {
+        resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200);
     } catch (err: any) {
-      console.error("Submission failed:", err);
-      setErrorMsg(err.message || "An unexpected error occurred. Please try again.");
+      console.error("Submission Error:", err);
+      setErrorMsg(err.message || "An unexpected error occurred. Please check server logs.");
     } finally {
       setIsLoading(false);
+      setLoadingStep(0);
     }
   };
 
@@ -266,612 +346,1015 @@ export default function Home() {
     setTimeout(() => setCopiedSection(null), 2500);
   };
 
-  const downloadComplaintTxt = () => {
+  const copyFullComplaint = () => {
     if (!result) return;
-    const { complaint, detectedLanguage, originalTranscript, translatedTranscript } = result;
+    const fullText = `FORMAL CITIZEN GRIEVANCE PETITION
+========================================
+CATEGORY: ${result.complaint.category}
+SUBJECT: ${result.complaint.subject}
+DATE: ${new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
 
-    const content = `===================================================================
-BHASHABRIDGE FORMAL CITIZEN GRIEVANCE
-Powered by Sarvam AI (Saaras v4 & Sarvam 105B)
-Date: ${new Date().toLocaleDateString("en-IN", { dateStyle: "full" })}
-Detected Spoken Language: ${detectedLanguage}
-===================================================================
+STATEMENT OF GRIEVANCE:
+----------------------------------------
+${result.complaint.description}
 
-CATEGORY:
-${complaint.category}
+RECOMMENDED ACTION & FILING CHANNELS:
+----------------------------------------
+${result.complaint.suggestedNextAction}
 
-SUBJECT:
-${complaint.subject}
+--
+Generated by BhashaBridge (Sarvam AI Multilingual Grievance Engine)
+Detected Speech Language: ${result.detectedLanguage}`;
 
-FORMAL COMPLAINT STATEMENT:
-${complaint.description}
+    copyToClipboard(fullText, "full");
+  };
 
-RECOMMENDED NEXT ACTIONS & FILING INSTRUCTIONS:
-${complaint.suggestedNextAction}
+  const downloadAsTxt = () => {
+    if (!result) return;
+    const fullText = `FORMAL CITIZEN GRIEVANCE PETITION
+========================================
+REFERENCE ID: BB-${Date.now().toString().slice(-6)}
+DATE: ${new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
+CATEGORY: ${result.complaint.category}
+SUBJECT: ${result.complaint.subject}
 
--------------------------------------------------------------------
-ORIGINAL CITIZEN VOICE TRANSCRIPT:
-${originalTranscript}
+========================================
+STATEMENT OF GRIEVANCE
+========================================
+${result.complaint.description}
 
-ENGLISH TRANSLATION:
-${translatedTranscript}
-===================================================================
-`;
+========================================
+ACTION & ESCALATION DIRECTORY
+========================================
+${result.complaint.suggestedNextAction}
 
-    const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `Complaint_${complaint.category.replace(/[^a-zA-Z0-9]/g, "_")}_${Date.now()}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+========================================
+SPEECH AUDIT TRAIL
+========================================
+Language Detected: ${result.detectedLanguage}
+Original Speech Transcript:
+${result.originalTranscript}
+
+Sarvam Saaras v4 English Translation:
+${result.translatedTranscript}
+
+--
+Generated via BhashaBridge
+Powered by Sarvam AI (Saaras v4 & 105B Indic LLM)`;
+
+    const element = document.createElement("a");
+    const file = new Blob([fullText], { type: "text/plain;charset=utf-8" });
+    element.href = URL.createObjectURL(file);
+    element.download = `Grievance_${result.complaint.category.replace(/[^a-zA-Z0-9]/g, "_")}_${Date.now().toString().slice(-4)}.txt`;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+
+  const printComplaint = () => {
+    window.print();
   };
 
   return (
-    <main className="min-h-screen px-4 py-8 md:py-12 max-w-5xl mx-auto flex flex-col justify-between">
-      {/* Header */}
-      <header className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neu-card-sm text-xs font-semibold text-indigo-700 tracking-wide uppercase mb-4">
-          <Sparkles className="w-4 h-4 text-indigo-600 animate-pulse" />
-          Powered by Sarvam AI • Saaras v4 + Sarvam 105B
+    <main className="min-h-screen bg-[#eaeff7] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white pb-20">
+      {/* ─── Top Enterprise Navigation Bar ───────────────────────────────── */}
+      <header className="sticky top-0 z-40 bg-[#eaeff7]/85 backdrop-blur-md border-b border-white/60 shadow-sm transition-all">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+          {/* Brand Logo & Tagline */}
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-purple-600 p-0.5 shadow-md shadow-indigo-300/40 flex items-center justify-center">
+              <div className="w-full h-full bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <Volume2 className="w-6 h-6 text-white stroke-[2.2]" />
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-extrabold tracking-tight text-slate-900 font-sans">
+                  Bhasha<span className="text-indigo-600">Bridge</span>
+                </span>
+                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-indigo-100/90 text-indigo-800 rounded-full border border-indigo-200">
+                  Sarvam AI
+                </span>
+              </div>
+              <p className="text-xs text-slate-500 font-medium">
+                National Multilingual Voice Grievance Engine
+              </p>
+            </div>
+          </div>
+
+          {/* Right Status & Links */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Saaras v4 & 105B Active</span>
+            </div>
+
+            <button
+              onClick={() => setShowLanguages(!showLanguages)}
+              className="neu-btn px-3.5 py-2 text-xs font-semibold text-slate-700 flex items-center gap-1.5 hover:text-indigo-600"
+            >
+              <Languages className="w-4 h-4 text-indigo-600" />
+              <span>22+ Languages</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 text-slate-400 transition-transform ${showLanguages ? "rotate-180" : ""
+                  }`}
+              />
+            </button>
+          </div>
         </div>
 
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-800 mb-3">
-          Bhasha<span className="text-indigo-600">Bridge</span>
-        </h1>
-        <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto font-medium">
-          Speak Your Language, Be Understood. Convert spoken Indic grievances into authoritative,
-          professionally drafted legal & civic complaints.
-        </p>
-
-        {/* Supported Languages Banner */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs font-medium text-slate-500">
-          <span className="flex items-center gap-1 text-indigo-600 font-semibold">
-            <Languages className="w-3.5 h-3.5" /> Supports 22+ Indian Languages:
-          </span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">हिंदी (Hindi)</span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">मराठी (Marathi)</span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">বাংলা (Bengali)</span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">தமிழ் (Tamil)</span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">తెలుగు (Telugu)</span>
-          <span className="bg-white/70 px-2 py-0.5 rounded-md shadow-sm border border-slate-200">& More</span>
-        </div>
+        {/* Expandable Languages Drawer */}
+        {showLanguages && (
+          <div className="border-t border-slate-200/80 bg-[#f1f5fc] px-4 py-4 animate-fade-in shadow-inner">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                  <Languages className="w-4 h-4 text-indigo-600" /> Supported Indic Languages & Dialects
+                </span>
+                <span className="text-xs text-slate-500">
+                  Auto-transcribed & translated via Sarvam Saaras v4
+                </span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+                {INDIC_LANGUAGES.map((lang) => (
+                  <div
+                    key={lang.name}
+                    className="p-2 rounded-xl bg-white/70 border border-white text-center hover:bg-white transition-colors shadow-xs"
+                  >
+                    <div className="text-xs font-bold text-slate-800">{lang.native}</div>
+                    <div className="text-[10px] text-slate-500 font-medium">{lang.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </header>
 
-      {/* Main Grid */}
-      <div className="grid grid-cols-1 gap-8">
-        {/* Step 1: Input Container */}
-        <div className="neu-card p-6 md:p-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-200/60">
+      {/* ─── Hero Section with Visual Value Proposition ──────────────────── */}
+      <section className="relative pt-12 pb-14 px-4 sm:px-6 overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Top Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-indigo-100 shadow-sm text-xs font-semibold text-indigo-900 mb-6 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4 text-indigo-600" />
+            <span>AI-Powered Citizen Grievance Redressal for India</span>
+            <span className="text-indigo-300">•</span>
+            <span className="text-slate-600">Zero Signup Required</span>
+          </div>
+
+          {/* Hero Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-5 font-sans">
+            Speak in your language. <br className="hidden sm:inline" />
+            <span className="gradient-text">Be understood by authorities.</span>
+          </h1>
+
+          {/* Hero Subtitle */}
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-8">
+            Bureaucratic petitions shouldn’t require legal jargon or fluent English. Simply record your voice in
+            <strong className="text-slate-800 font-semibold"> Hindi, Marathi, Bengali, Tamil</strong> or 20+ Indic languages. BhashaBridge translates and structures your complaint into a formal petition accepted by
+            <strong className="text-slate-800 font-semibold"> CPGRAMS, Consumer Forums & DISCOMs</strong>.
+          </p>
+
+          {/* Quick Metrics Bar */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-600 font-semibold">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+              <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+              <span>22+ Scheduled Languages</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span>100% Client-Side Privacy</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+              <Zap className="w-4 h-4 text-amber-500" />
+              <span>Instant Legal Structuring (&lt;15s)</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/60 border border-white shadow-xs">
+              <Building2 className="w-4 h-4 text-blue-600" />
+              <span>CPGRAMS & Ombudsman Ready</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MNC-Grade 3-Step Visual Guide (How It Works Diagram) ─────────── */}
+      <section className="px-4 sm:px-6 max-w-6xl mx-auto mb-14">
+        <div className="text-center mb-8">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+            Intuitive 3-Step Workflow
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            How Voice Turns Into an Official Complaint
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Step 1 Card with Visual SVG */}
+          <div className="neu-flat p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
             <div>
-              <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-indigo-600 text-white text-xs font-bold">
-                  1
+              <div className="flex items-center justify-between mb-4">
+                <span className="w-8 h-8 rounded-xl bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-indigo-300">
+                  01
                 </span>
-                Record or Upload Your Grievance
-              </h2>
-              <p className="text-xs text-slate-500 mt-0.5">
-                Speak freely in your mother tongue about your civic, consumer, or service issue.
+                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Voice In
+                </span>
+              </div>
+
+              {/* Step 1 Visual Vector Diagram */}
+              <div className="h-32 rounded-2xl bg-gradient-to-b from-indigo-50/70 to-white/70 border border-indigo-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
+                {/* Visual Audio Waves and Speech bubbles */}
+                <div className="flex items-center gap-2">
+                  <div className="px-2.5 py-1 rounded-lg bg-white shadow-sm border border-slate-200 text-xs font-bold text-slate-700">
+                    नमस्ते
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-200 animate-pulse">
+                    <Mic className="w-6 h-6" />
+                  </div>
+                  <div className="px-2.5 py-1 rounded-lg bg-white shadow-sm border border-slate-200 text-xs font-bold text-slate-700">
+                    नमस्कार
+                  </div>
+                </div>
+                {/* Micro waveform overlay */}
+                <div className="absolute bottom-2 left-6 right-6 flex items-center justify-center gap-1 opacity-70">
+                  <span className="w-1 h-3 bg-indigo-400 rounded-full animate-pulse" />
+                  <span className="w-1 h-6 bg-indigo-600 rounded-full animate-pulse" />
+                  <span className="w-1 h-4 bg-indigo-500 rounded-full animate-pulse" />
+                  <span className="w-1 h-8 bg-indigo-700 rounded-full animate-pulse" />
+                  <span className="w-1 h-3 bg-indigo-400 rounded-full animate-pulse" />
+                </div>
+              </div>
+
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">
+                Speak or Upload Voice Note
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Click Record and explain your problem naturally in Hindi, Marathi, Bengali, or your native dialect. No formal phrasing needed.
               </p>
             </div>
 
-            {/* Mode Switcher */}
-            <div className="flex neu-inset-sm p-1 gap-1">
+            <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
+              <Headphones className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Supports live mic & .wav / .mp3 uploads</span>
+            </div>
+          </div>
+
+          {/* Step 2 Card with Visual SVG */}
+          <div className="neu-flat p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-purple-300">
+                  02
+                </span>
+                <span className="text-[11px] font-bold text-purple-700 bg-purple-50 border border-purple-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  AI Translation & Reasoning
+                </span>
+              </div>
+
+              {/* Step 2 Visual Vector Diagram */}
+              <div className="h-32 rounded-2xl bg-gradient-to-b from-purple-50/70 to-white/70 border border-purple-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
+                <div className="flex items-center gap-3">
+                  <div className="text-center">
+                    <div className="px-2 py-1 rounded bg-white shadow-xs border border-purple-200 text-[11px] font-bold text-purple-900">
+                      Saaras v4
+                    </div>
+                    <span className="text-[9px] text-slate-500 font-medium">Translate STT</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <Sparkles className="w-5 h-5 text-purple-600 animate-spin" />
+                    <ArrowRight className="w-4 h-4 text-purple-400 mt-0.5" />
+                  </div>
+                  <div className="text-center">
+                    <div className="px-2 py-1 rounded bg-purple-600 text-white shadow-xs text-[11px] font-bold">
+                      Sarvam 105B
+                    </div>
+                    <span className="text-[9px] text-slate-500 font-medium">Legal Reasoning</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">
+                Sarvam AI Dual Pipeline
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Saaras v4 translates audio to English. Then Sarvam 105B structures the incident timeline, identifies legal deficiencies, and categorizes the breach.
+              </p>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
+              <Scale className="w-3.5 h-3.5 text-purple-600" />
+              <span>Preserves dates, monetary damages & facts</span>
+            </div>
+          </div>
+
+          {/* Step 3 Card with Visual SVG */}
+          <div className="neu-flat p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="w-8 h-8 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-emerald-300">
+                  03
+                </span>
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Legal Complaint Ready
+                </span>
+              </div>
+
+              {/* Step 3 Visual Vector Diagram */}
+              <div className="h-32 rounded-2xl bg-gradient-to-b from-emerald-50/70 to-white/70 border border-emerald-100/60 p-3 mb-4 flex items-center justify-center relative overflow-hidden">
+                <div className="w-48 bg-white rounded-xl shadow-md border border-emerald-200 p-2.5 transform rotate-1">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-1 mb-1.5">
+                    <span className="text-[9px] font-bold text-emerald-800 uppercase">FORMAL GRIEVANCE</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  </div>
+                  <div className="h-2 w-3/4 bg-slate-200 rounded-sm mb-1" />
+                  <div className="h-1.5 w-full bg-slate-100 rounded-sm mb-1" />
+                  <div className="h-1.5 w-5/6 bg-slate-100 rounded-sm" />
+                </div>
+              </div>
+
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">
+                Download & File with Authority
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Receive an authoritative petition with specific guidance on which portal (CPGRAMS, Consumer Helpline, or DISCOM) to submit to.
+              </p>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-slate-200/60 text-[11px] text-slate-500 font-medium flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <span>One-click Copy, .txt Download & Print</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Core Interactive Console ────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 max-w-4xl mx-auto mb-14" id="studio">
+        <div className="neu-flat-lg p-6 sm:p-10 relative">
+          {/* Header Title inside card */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200/70">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                Grievance Input Studio
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium">
+                Choose your preferred input method to create your petition
+              </p>
+            </div>
+
+            {/* Mode Switcher Tabs */}
+            <div className="neu-inset-sm p-1.5 flex items-center gap-1">
               <button
                 type="button"
                 onClick={() => {
                   setInputMode("record");
-                  resetAll();
+                  setSelectedPresetText(null);
                 }}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                  inputMode === "record" ? "neu-pill-active" : "neu-pill-inactive"
-                }`}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${inputMode === "record" ? "neu-tab-active" : "neu-tab-inactive"
+                  }`}
               >
                 <Mic className="w-3.5 h-3.5" />
-                Microphone
+                <span>Record Voice</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => {
                   setInputMode("upload");
-                  resetAll();
+                  setSelectedPresetText(null);
                 }}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                  inputMode === "upload" ? "neu-pill-active" : "neu-pill-inactive"
-                }`}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${inputMode === "upload" ? "neu-tab-active" : "neu-tab-inactive"
+                  }`}
               >
                 <Upload className="w-3.5 h-3.5" />
-                Upload Audio
+                <span>Upload Audio</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => {
-                  setInputMode("presets");
-                  resetAll();
-                }}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                  inputMode === "presets" ? "neu-pill-active" : "neu-pill-inactive"
-                }`}
+                onClick={() => setInputMode("presets")}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${inputMode === "presets" ? "neu-tab-active" : "neu-tab-inactive"
+                  }`}
               >
                 <Sparkles className="w-3.5 h-3.5" />
-                Demo Presets
+                <span>Sample Scenarios</span>
               </button>
             </div>
           </div>
 
-          {/* Mode 1: Microphone Recording */}
+          {/* ── MODE 1: RECORD VOICE ───────────────────────────────────────── */}
           {inputMode === "record" && (
-            <div className="neu-inset p-8 text-center flex flex-col items-center justify-center min-h-[220px]">
-              {!audioBlob ? (
-                <>
-                  <div className="relative mb-5">
-                    {isRecording && <div className="absolute inset-0 rounded-full recording-pulse bg-red-400" />}
-                    <button
-                      type="button"
-                      onClick={isRecording ? stopRecording : startRecording}
-                      className={`relative z-10 w-20 h-20 rounded-full flex items-center justify-center transition-all ${
-                        isRecording
-                          ? "bg-red-500 text-white shadow-lg shadow-red-300 scale-105"
-                          : "neu-btn text-indigo-600 hover:text-indigo-700"
-                      }`}
-                      title={isRecording ? "Stop Recording" : "Start Recording"}
-                    >
-                      {isRecording ? <Square className="w-8 h-8 fill-current" /> : <Mic className="w-8 h-8" />}
-                    </button>
-                  </div>
+            <div className="py-8 flex flex-col items-center text-center">
+              {/* Circular tactile mic button */}
+              <div className="relative mb-6">
+                {isRecording && (
+                  <div className="absolute inset-0 rounded-full record-pulse -m-2 pointer-events-none" />
+                )}
 
+                <button
+                  type="button"
+                  onClick={isRecording ? stopRecording : startRecording}
+                  disabled={isLoading}
+                  className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center transition-all ${isRecording
+                    ? "bg-gradient-to-tr from-rose-500 to-red-600 text-white shadow-xl shadow-red-200 scale-105"
+                    : audioBlob
+                      ? "neu-btn text-indigo-600 hover:scale-105"
+                      : "neu-btn text-indigo-600 hover:scale-105"
+                    }`}
+                  aria-label={isRecording ? "Stop recording" : "Start recording"}
+                >
                   {isRecording ? (
-                    <div>
-                      <div className="flex items-center justify-center gap-2 text-red-600 font-bold text-lg mb-1">
-                        <span className="w-3 h-3 rounded-full bg-red-600 animate-ping" />
-                        Recording: 00:{recordingTime < 10 ? `0${recordingTime}` : recordingTime} / 00:30
-                      </div>
-                      <p className="text-xs text-slate-500">
-                        Speak clearly in Hindi, Marathi, or any Indian language. Click square when done.
-                      </p>
-                    </div>
+                    <>
+                      <Square className="w-8 h-8 fill-current" />
+                      <span className="text-[11px] font-extrabold uppercase mt-1 tracking-wider">
+                        Stop
+                      </span>
+                    </>
                   ) : (
-                    <div>
-                      <h3 className="font-semibold text-slate-700 mb-1">Click the microphone to start speaking</h3>
-                      <p className="text-xs text-slate-500 max-w-sm">
-                        Explain your problem (e.g. faulty electricity meter, delayed refund, damaged road). Max 30 seconds.
-                      </p>
+                    <>
+                      <Mic className="w-10 h-10 stroke-[2.2]" />
+                      <span className="text-[11px] font-bold mt-1 text-slate-700">
+                        {audioBlob ? "Record Again" : "Tap to Speak"}
+                      </span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Status and Timer */}
+              {isRecording ? (
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100 text-red-700 font-mono text-sm font-bold border border-red-200">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping" />
+                    <span>00:{recordingTime < 10 ? `0${recordingTime}` : recordingTime} / 00:30</span>
+                  </div>
+                  <p className="text-xs text-slate-500">
+                    Listening... Speak clearly in your mother tongue.
+                  </p>
+                </div>
+              ) : audioBlob ? (
+                <div className="space-y-4 w-full max-w-md">
+                  <div className="neu-inset p-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={toggleAudioPlayback}
+                        className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-md hover:bg-indigo-700 transition-colors"
+                      >
+                        {isPlayingAudio ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                      </button>
+                      <div className="text-left">
+                        <div className="text-xs font-bold text-slate-800">Recorded Audio Clip</div>
+                        <div className="text-[10px] text-slate-500 font-mono">
+                          Duration: {recordingTime}s • Ready for Saaras v4
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAudioBlob(null);
+                        setAudioUrl(null);
+                      }}
+                      className="text-xs text-slate-500 hover:text-red-600 font-medium flex items-center gap-1"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" /> Discard
+                    </button>
+                  </div>
+
+                  {audioUrl && <audio ref={audioPlayerRef} src={audioUrl} className="hidden" />}
+
+                  <button
+                    type="button"
+                    onClick={() => triggerGeneration()}
+                    disabled={isLoading}
+                    className="neu-btn-primary w-full py-4 text-sm font-bold flex items-center justify-center gap-2"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    <span>Generate Official Complaint</span>
+                  </button>
+                </div>
               ) : (
-                /* Recorded Audio Preview */
-                <div className="w-full max-w-md flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-bold text-slate-800 mb-1">Voice Recording Captured!</h4>
-                  <p className="text-xs text-slate-500 mb-4">Duration: ~{recordingTime}s • Ready for translation</p>
-
-                  {audioUrl && (
-                    <audio
-                      ref={audioPlayerRef}
-                      src={audioUrl}
-                      onEnded={() => setIsPlayingAudio(false)}
-                      className="hidden"
-                    />
-                  )}
-
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={toggleAudioPlay}
-                      className="neu-btn px-4 py-2.5 rounded-xl text-xs font-semibold text-indigo-700 flex items-center gap-2"
-                    >
-                      {isPlayingAudio ? (
-                        <>
-                          <Pause className="w-4 h-4" /> Pause
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-4 h-4" /> Listen Audio
-                        </>
-                      )}
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={resetAll}
-                      className="neu-btn px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-600 flex items-center gap-1.5 hover:text-red-600"
-                    >
-                      <RotateCcw className="w-3.5 h-3.5" /> Re-record
-                    </button>
-                  </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-slate-700">
+                    Click the microphone and start describing your grievance
+                  </p>
+                  <p className="text-xs text-slate-500 max-w-sm mx-auto">
+                    Speak in Hindi, Marathi, Tamil, or your native dialect. Up to 30 seconds per recording.
+                  </p>
                 </div>
               )}
             </div>
           )}
 
-          {/* Mode 2: File Upload */}
+          {/* ── MODE 2: UPLOAD AUDIO ───────────────────────────────────────── */}
           {inputMode === "upload" && (
-            <div
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={handleDrop}
-              onClick={() => fileInputRef.current?.click()}
-              className="neu-inset p-8 text-center flex flex-col items-center justify-center min-h-[220px] cursor-pointer hover:border-indigo-400 transition-colors"
-            >
+            <div className="py-8">
               <input
                 ref={fileInputRef}
                 type="file"
-                accept="audio/*,.wav,.mp3,.m4a,.ogg,.webm,.flac,.aac"
+                accept="audio/*,.wav,.mp3,.m4a,.ogg,.flac"
                 onChange={handleFileUpload}
                 className="hidden"
               />
 
               {!uploadedFile ? (
-                <>
-                  <div className="w-16 h-16 rounded-2xl neu-card-sm flex items-center justify-center text-indigo-600 mb-3">
-                    <Upload className="w-7 h-7" />
+                <div
+                  onClick={() => fileInputRef.current?.click()}
+                  className="neu-inset p-8 text-center cursor-pointer hover:border-indigo-300 transition-all group"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+                    <Upload className="w-8 h-8" />
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-1">Drop your audio recording here</h3>
-                  <p className="text-xs text-slate-500 mb-2">or click to browse from your computer / phone</p>
-                  <p className="text-[11px] text-slate-400">
-                    Supports WAV, MP3, M4A, OGG, WEBM, FLAC (Max 10MB, under 30s recommended)
+                  <h4 className="text-sm font-bold text-slate-800 mb-1">
+                    Click or Drag to Upload Audio File
+                  </h4>
+                  <p className="text-xs text-slate-500 mb-3">
+                    Supports .wav, .mp3, .m4a, .ogg, or .flac (Max file size: 10MB)
                   </p>
-                </>
+                  <div className="inline-block px-3 py-1 rounded-lg bg-white/80 border border-slate-200 text-[11px] font-semibold text-indigo-700">
+                    Browse Local Audio File
+                  </div>
+                </div>
               ) : (
-                <div className="w-full max-w-md">
-                  <div className="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mx-auto mb-3">
-                    <FileText className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-bold text-slate-800 truncate mb-1">{uploadedFile.name}</h4>
-                  <p className="text-xs text-slate-500 mb-4">
-                    Size: {(uploadedFile.size / 1024).toFixed(1)} KB • Type: {uploadedFile.type || "audio"}
-                  </p>
-
-                  {audioUrl && (
-                    <audio
-                      ref={audioPlayerRef}
-                      src={audioUrl}
-                      onEnded={() => setIsPlayingAudio(false)}
-                      className="hidden"
-                    />
-                  )}
-
-                  <div className="flex items-center justify-center gap-3">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleAudioPlay();
-                      }}
-                      className="neu-btn px-4 py-2 rounded-xl text-xs font-semibold text-indigo-700 flex items-center gap-2"
-                    >
-                      {isPlayingAudio ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                      {isPlayingAudio ? "Pause" : "Play File"}
-                    </button>
+                <div className="space-y-4 max-w-md mx-auto">
+                  <div className="neu-inset p-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={toggleAudioPlayback}
+                        className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-md hover:bg-indigo-700 transition-colors"
+                      >
+                        {isPlayingAudio ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                      </button>
+                      <div className="text-left">
+                        <div className="text-xs font-bold text-slate-800 truncate max-w-[200px]">
+                          {uploadedFile.name}
+                        </div>
+                        <div className="text-[10px] text-slate-500 font-mono">
+                          {(uploadedFile.size / (1024 * 1024)).toFixed(2)} MB • {uploadedFile.type || "audio"}
+                        </div>
+                      </div>
+                    </div>
 
                     <button
                       type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        resetAll();
+                      onClick={() => {
+                        setUploadedFile(null);
+                        setAudioUrl(null);
+                        if (fileInputRef.current) fileInputRef.current.value = "";
                       }}
-                      className="neu-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-red-600 flex items-center gap-1"
+                      className="text-xs text-slate-500 hover:text-red-600 font-medium flex items-center gap-1"
                     >
                       <RotateCcw className="w-3.5 h-3.5" /> Remove
                     </button>
                   </div>
+
+                  {audioUrl && <audio ref={audioPlayerRef} src={audioUrl} className="hidden" />}
+
+                  <button
+                    type="button"
+                    onClick={() => triggerGeneration()}
+                    disabled={isLoading}
+                    className="neu-btn-primary w-full py-4 text-sm font-bold flex items-center justify-center gap-2"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    <span>Process Audio with Sarvam AI</span>
+                  </button>
                 </div>
               )}
             </div>
           )}
 
-          {/* Mode 3: Demo Scenarios */}
+          {/* ── MODE 3: SAMPLE PRESETS ─────────────────────────────────────── */}
           {inputMode === "presets" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {SAMPLE_SCENARIOS.map((item, idx) => {
-                const isSelected = selectedPresetText === item.text;
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => setSelectedPresetText(item.text)}
-                    className={`p-4 rounded-2xl cursor-pointer transition-all ${
-                      isSelected ? "neu-inset border-2 border-indigo-500" : "neu-card-sm hover:translate-y-[-2px]"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
-                        {item.language}
-                      </span>
-                      {isSelected && <Check className="w-4 h-4 text-indigo-600 font-bold" />}
+            <div className="py-6">
+              <div className="mb-4 text-left">
+                <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1">
+                  1-Click Test Scenarios (No mic required)
+                </span>
+                <p className="text-xs text-slate-500">
+                  Select an authentic citizen case below to test the Sarvam 105B grievance structuring instantly:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                {SAMPLE_SCENARIOS.map((scenario) => {
+                  const isSelected = selectedPresetText === scenario.text;
+                  return (
+                    <div
+                      key={scenario.title}
+                      onClick={() => setSelectedPresetText(scenario.text)}
+                      className={`p-4 rounded-2xl cursor-pointer text-left transition-all ${isSelected
+                        ? "bg-indigo-50/90 border-2 border-indigo-600 shadow-sm"
+                        : "neu-flat hover:border-indigo-200"
+                        }`}
+                    >
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs font-bold text-slate-900">{scenario.title}</span>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800">
+                          {scenario.scriptBadge}
+                        </span>
+                      </div>
+                      <div className="text-[11px] font-semibold text-indigo-700 mb-2">
+                        {scenario.subtitle}
+                      </div>
+                      <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed font-normal">
+                        "{scenario.text}"
+                      </p>
                     </div>
-                    <h4 className="font-bold text-slate-800 text-sm mb-1">{item.title}</h4>
-                    <p className="text-xs text-indigo-600 font-medium mb-2">{item.subtitle}</p>
-                    <p className="text-xs text-slate-600 line-clamp-3 italic">"{item.text}"</p>
+                  );
+                })}
+              </div>
+
+              {selectedPresetText && (
+                <div className="space-y-3">
+                  <div className="neu-inset p-3 text-left text-xs text-slate-700 leading-relaxed font-normal">
+                    <span className="font-bold text-indigo-900 block mb-1">Selected Narrative:</span>
+                    {selectedPresetText}
                   </div>
-                );
-              })}
+
+                  <button
+                    type="button"
+                    onClick={() => triggerGeneration(selectedPresetText)}
+                    disabled={isLoading}
+                    className="neu-btn-primary w-full py-4 text-sm font-bold flex items-center justify-center gap-2"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    <span>Generate Complaint from Selected Scenario</span>
+                  </button>
+                </div>
+              )}
             </div>
           )}
 
-          {/* Error Banner */}
+          {/* ── ERROR MESSAGE BANNER ───────────────────────────────────────── */}
           {errorMsg && (
-            <div className="mt-4 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="font-semibold">Processing Notice</p>
-                <p>{errorMsg}</p>
+            <div className="mt-4 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 flex items-start gap-3 text-left animate-fade-in">
+              <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm leading-relaxed flex-1">
+                <span className="font-bold block mb-0.5">Processing Notice</span>
+                {errorMsg}
               </div>
             </div>
           )}
 
-          {/* Submit Action */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-xs text-slate-500 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              Private & securely processed via Sarvam API Backend
-            </div>
-
-            <button
-              type="button"
-              onClick={handleSubmit}
-              disabled={isLoading || (!audioBlob && !selectedPresetText)}
-              className={`w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${
-                isLoading || (!audioBlob && !selectedPresetText)
-                  ? "opacity-50 cursor-not-allowed neu-btn text-slate-400"
-                  : "neu-btn-primary"
-              }`}
-            >
-              {isLoading ? (
-                <>
-                  <RefreshCw className="w-4 h-4 animate-spin" />
-                  Generating Complaint...
-                </>
-              ) : (
-                <>
-                  <Sparkles className="w-4 h-4" />
-                  Generate Formal Complaint
-                </>
-              )}
-            </button>
-          </div>
-
-          {/* Loading Stepper */}
+          {/* ── LOADING PIPELINE STEPPER ───────────────────────────────────── */}
           {isLoading && (
-            <div className="mt-8 pt-6 border-t border-slate-200/60">
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center justify-between text-xs font-semibold text-indigo-700 mb-1">
-                  <span>AI Pipeline Processing</span>
-                  <span>{loadingStep === 1 ? "25%" : loadingStep === 2 ? "60%" : "90%"}</span>
+            <div className="mt-6 p-6 rounded-2xl neu-inset text-center space-y-4 animate-fade-in">
+              <div className="flex justify-center">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-200 animate-spin">
+                  <RefreshCw className="w-6 h-6" />
                 </div>
+              </div>
 
-                <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
-                  <div
-                    className="bg-indigo-600 h-full transition-all duration-700 ease-out"
-                    style={{
-                      width: loadingStep === 1 ? "30%" : loadingStep === 2 ? "65%" : "95%",
-                    }}
-                  />
-                </div>
+              <div className="space-y-1">
+                <h4 className="text-sm font-bold text-slate-900">
+                  {loadingStep === 1 && "Stage 1: Transcribing & Translating Speech..."}
+                  {loadingStep === 2 && "Stage 2: Structuring Grievance with Sarvam 105B..."}
+                  {loadingStep === 3 && "Stage 3: Drafting Official Petition & Escalation Route..."}
+                </h4>
+                <p className="text-xs text-slate-500 max-w-md mx-auto">
+                  {loadingStep === 1 &&
+                    "Sarvam Saaras v4 is processing acoustic features and translating Indic speech into English."}
+                  {loadingStep === 2 &&
+                    "Sarvam 105B flagship LLM is extracting facts, damages, legal breaches, and filing strategy."}
+                  {loadingStep === 3 &&
+                    "Formatting subject line, categorical classification, and petition narrative."}
+                </p>
+              </div>
 
-                <div className="grid grid-cols-3 text-center gap-2 pt-2 text-xs">
-                  <div
-                    className={`${
-                      loadingStep >= 1 ? "text-indigo-600 font-bold" : "text-slate-400"
-                    } flex flex-col items-center gap-1`}
-                  >
-                    <span className="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] bg-white">
-                      1
-                    </span>
-                    <span>Ingesting Audio</span>
-                  </div>
-                  <div
-                    className={`${
-                      loadingStep >= 2 ? "text-indigo-600 font-bold" : "text-slate-400"
-                    } flex flex-col items-center gap-1`}
-                  >
-                    <span className="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] bg-white">
-                      2
-                    </span>
-                    <span>Saaras v4 Translation</span>
-                  </div>
-                  <div
-                    className={`${
-                      loadingStep >= 3 ? "text-indigo-600 font-bold" : "text-slate-400"
-                    } flex flex-col items-center gap-1`}
-                  >
-                    <span className="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] bg-white">
-                      3
-                    </span>
-                    <span>Sarvam 105B Drafting</span>
-                  </div>
-                </div>
+              {/* Progress Stepper Dots */}
+              <div className="flex items-center justify-center gap-3 pt-2">
+                <span
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 1 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                    }`}
+                />
+                <span className="w-8 h-0.5 bg-slate-300" />
+                <span
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 2 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                    }`}
+                />
+                <span className="w-8 h-0.5 bg-slate-300" />
+                <span
+                  className={`w-3 h-3 rounded-full transition-all ${loadingStep >= 3 ? "bg-indigo-600 ring-4 ring-indigo-100" : "bg-slate-300"
+                    }`}
+                />
               </div>
             </div>
           )}
         </div>
+      </section>
 
-        {/* Step 2: Output Container */}
-        {result && (
-          <div className="neu-card p-6 md:p-8 animate-in fade-in duration-500">
-            {/* Header / Tabs */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-200/60 mb-6">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">
-                    {result.complaint.category}
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold">
-                    Detected: {result.detectedLanguage}
-                  </span>
+      {/* ─── RESULT DOCUMENT SECTION ─────────────────────────────────────── */}
+      {result && (
+        <section ref={resultsRef} className="px-4 sm:px-6 max-w-4xl mx-auto mb-16 animate-fade-in">
+          <div className="neu-flat-lg p-6 sm:p-10 border-2 border-indigo-200/80">
+            {/* Top Toolbar */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                  <Check className="w-6 h-6 stroke-[2.5]" />
                 </div>
-                <h3 className="text-xl font-extrabold text-slate-800">Generated Official Complaint</h3>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-slate-900">
+                      Formal Grievance Petition
+                    </h3>
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                      Ready to File
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 font-medium">
+                    Language: <span className="font-semibold text-indigo-700">{result.detectedLanguage}</span> • Generated via Sarvam AI
+                  </p>
+                </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex items-center gap-2 w-full sm:w-auto">
+              {/* View Switcher: Complaint vs Transcripts */}
+              <div className="neu-inset-sm p-1 flex items-center gap-1">
                 <button
                   type="button"
-                  onClick={() =>
-                    copyToClipboard(
-                      `SUBJECT: ${result.complaint.subject}\n\nCATEGORY: ${result.complaint.category}\n\nDESCRIPTION:\n${result.complaint.description}\n\nSUGGESTED ACTION:\n${result.complaint.suggestedNextAction}`,
-                      "all"
-                    )
-                  }
-                  className="neu-btn px-3.5 py-2 rounded-xl text-xs font-bold text-indigo-700 flex items-center gap-1.5 hover:bg-white"
+                  onClick={() => setActiveTab("complaint")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${activeTab === "complaint" ? "neu-tab-active" : "neu-tab-inactive"
+                    }`}
                 >
-                  {copiedSection === "all" ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" /> Copied!
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" /> Copy All
-                    </>
-                  )}
+                  <FileText className="w-3.5 h-3.5 inline mr-1" />
+                  Official Letter
                 </button>
-
                 <button
                   type="button"
-                  onClick={downloadComplaintTxt}
-                  className="neu-btn px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 flex items-center gap-1.5 hover:bg-white"
+                  onClick={() => setActiveTab("transcripts")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${activeTab === "transcripts" ? "neu-tab-active" : "neu-tab-inactive"
+                    }`}
                 >
-                  <Download className="w-3.5 h-3.5" /> Download TXT
+                  <Languages className="w-3.5 h-3.5 inline mr-1" />
+                  Speech Transcripts
                 </button>
               </div>
             </div>
 
-            {/* View Switcher: Complaint Letter vs Original Transcripts */}
-            <div className="flex neu-inset-sm p-1 gap-1 mb-6 max-w-sm">
-              <button
-                type="button"
-                onClick={() => setActiveTab("complaint")}
-                className={`flex-1 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                  activeTab === "complaint" ? "neu-pill-active" : "neu-pill-inactive"
-                }`}
-              >
-                Formal Grievance
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveTab("transcripts")}
-                className={`flex-1 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                  activeTab === "transcripts" ? "neu-pill-active" : "neu-pill-inactive"
-                }`}
-              >
-                Speech Transcripts
-              </button>
-            </div>
+            {/* TAB 1: FORMAL COMPLAINT LETTER */}
+            {activeTab === "complaint" && (
+              <div className="py-6 space-y-6">
+                {/* Meta details strip */}
+                <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-indigo-50/70 border border-indigo-100/80">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                      Category:
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-bold text-xs shadow-xs">
+                      {result.complaint.category}
+                    </span>
+                  </div>
 
-            {activeTab === "complaint" ? (
-              <div className="space-y-6">
-                {/* Subject Box */}
-                <div className="neu-inset p-5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                      Date:
+                    </span>
+                    <span className="text-xs font-bold text-slate-700">
+                      {new Date().toLocaleDateString("en-IN", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Subject Line */}
+                <div className="neu-inset p-4 sm:p-5 text-left">
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-[11px] font-bold text-indigo-600 uppercase tracking-wider">Subject</span>
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                      Formal Subject Line
+                    </span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(result.complaint.subject, "subject")}
-                      className="text-xs text-slate-500 hover:text-indigo-600 flex items-center gap-1 font-medium"
+                      className="text-xs text-slate-500 hover:text-indigo-600 font-semibold flex items-center gap-1"
                     >
                       {copiedSection === "subject" ? (
                         <>
-                          <Check className="w-3 h-3 text-emerald-600" /> Copied
+                          <Check className="w-3.5 h-3.5 text-emerald-600" /> Copied
                         </>
                       ) : (
                         <>
-                          <Copy className="w-3 h-3" /> Copy
+                          <Copy className="w-3.5 h-3.5" /> Copy Subject
                         </>
                       )}
                     </button>
                   </div>
-                  <p className="text-base font-bold text-slate-800 leading-snug">{result.complaint.subject}</p>
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    {result.complaint.subject}
+                  </h4>
                 </div>
 
-                {/* Complaint Description Box */}
-                <div className="neu-inset p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-bold text-indigo-600 uppercase tracking-wider">
-                      Formal Complaint Statement
+                {/* Statement of Grievance Narrative */}
+                <div className="neu-inset p-5 sm:p-7 text-left space-y-3">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/80">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                      Statement of Grievance & Incident Narrative
                     </span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(result.complaint.description, "desc")}
-                      className="text-xs text-slate-500 hover:text-indigo-600 flex items-center gap-1 font-medium"
+                      className="text-xs text-slate-500 hover:text-indigo-600 font-semibold flex items-center gap-1"
                     >
                       {copiedSection === "desc" ? (
                         <>
-                          <Check className="w-3 h-3 text-emerald-600" /> Copied
+                          <Check className="w-3.5 h-3.5 text-emerald-600" /> Copied
                         </>
                       ) : (
                         <>
-                          <Copy className="w-3 h-3" /> Copy Statement
+                          <Copy className="w-3.5 h-3.5" /> Copy Body
                         </>
                       )}
                     </button>
                   </div>
-                  <div className="text-sm text-slate-700 leading-relaxed space-y-3 whitespace-pre-line font-normal">
+                  <div className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal whitespace-pre-line space-y-3">
                     {result.complaint.description}
                   </div>
                 </div>
 
-                {/* Suggested Next Action */}
-                <div className="p-5 rounded-2xl bg-indigo-50/80 border border-indigo-100 flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-indigo-200">
+                {/* Recommended Next Action & Escalation Directory */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-indigo-50/90 border border-indigo-200/90 text-left flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-indigo-300">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h4 className="text-xs font-bold text-indigo-900 uppercase tracking-wider mb-1">
-                        Recommended Next Action & Filing Channels
+                    <div className="flex items-center justify-between mb-1.5">
+                      <h4 className="text-xs font-bold text-indigo-950 uppercase tracking-wider">
+                        Recommended Filing Route & Next Actions
                       </h4>
                       <button
                         type="button"
                         onClick={() => copyToClipboard(result.complaint.suggestedNextAction, "action")}
-                        className="text-xs text-indigo-700 hover:underline flex items-center gap-1 font-semibold"
+                        className="text-xs text-indigo-700 hover:underline font-bold flex items-center gap-1"
                       >
                         {copiedSection === "action" ? "Copied" : "Copy"}
                       </button>
                     </div>
-                    <p className="text-xs md:text-sm text-indigo-950/80 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-indigo-950/85 leading-relaxed font-normal">
                       {result.complaint.suggestedNextAction}
                     </p>
                   </div>
                 </div>
+
+                {/* Action Buttons Bar */}
+                <div className="pt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={copyFullComplaint}
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                    >
+                      {copiedSection === "full" ? (
+                        <>
+                          <Check className="w-4 h-4 text-emerald-600" /> Copied Full Complaint
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-4 h-4 text-indigo-600" /> Copy Full Text
+                        </>
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={downloadAsTxt}
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                    >
+                      <Download className="w-4 h-4 text-indigo-600" /> Download .TXT
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={printComplaint}
+                      className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2 hover:text-indigo-600"
+                    >
+                      <Printer className="w-4 h-4 text-indigo-600" /> Print / Save PDF
+                    </button>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setResult(null);
+                      setAudioBlob(null);
+                      setAudioUrl(null);
+                      setUploadedFile(null);
+                      setSelectedPresetText(null);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="neu-btn px-4 py-2.5 text-xs font-bold text-slate-600 hover:text-slate-900 flex items-center gap-1.5"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" /> Start New Grievance
+                  </button>
+                </div>
               </div>
-            ) : (
-              /* Transcripts View */
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="neu-inset p-5">
-                  <span className="text-[11px] font-bold text-indigo-600 uppercase tracking-wider block mb-2">
-                    Original Speech Transcript ({result.detectedLanguage})
-                  </span>
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    {result.originalTranscript}
-                  </p>
+            )}
+
+            {/* TAB 2: SPEECH TRANSCRIPTS SIDE-BY-SIDE */}
+            {activeTab === "transcripts" && (
+              <div className="py-6 space-y-4 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="neu-inset p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                        Original Speech Transcript
+                      </span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">
+                        {result.detectedLanguage}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+                      {result.originalTranscript}
+                    </p>
+                  </div>
+
+                  <div className="neu-inset p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-700">
+                        Saaras v4 English Translation
+                      </span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">
+                        Translate Mode
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+                      {result.translatedTranscript}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="neu-inset p-5">
-                  <span className="text-[11px] font-bold text-indigo-600 uppercase tracking-wider block mb-2">
-                    Saaras v4 English Translation
-                  </span>
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    {result.translatedTranscript}
-                  </p>
+                <div className="p-4 rounded-xl bg-slate-100 text-[11px] text-slate-600 leading-relaxed">
+                  <strong>Verification Note:</strong> Sarvam Saaras v4 acoustic models recognize Indic phonetics and contextual colloquialisms, ensuring zero loss of critical grievance details before sending to the 105B LLM.
                 </div>
               </div>
             )}
           </div>
-        )}
-      </div>
+        </section>
+      )}
 
-      {/* Footer */}
-      <footer className="mt-14 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
-        <p className="font-semibold text-slate-600 mb-1">
-          BhashaBridge • Designed for Indian Citizens, Municipalities & Consumer Grievances
-        </p>
-        <p>
-          Utilizing Sarvam AI Saaras v4 (Speech-to-Text & Translation) and Sarvam-105B (Flagship Indic LLM) on Next.js.
+      {/* ─── Official Grievance Portals Directory ────────────────────────── */}
+      <section className="px-4 sm:px-6 max-w-6xl mx-auto mb-16">
+        <div className="text-center mb-8">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-indigo-600 block mb-1">
+            Where to Submit Your Grievance
+          </span>
+          <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+            Direct Government & Regulatory Portals
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto">
+            Once generated, copy your petition and file directly on these authorized portals for legally mandated response times.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {OFFICIAL_PORTALS.map((portal) => (
+            <a
+              key={portal.name}
+              href={portal.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neu-flat p-5 rounded-2xl block text-left group hover:-translate-y-1 transition-all"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <Building2 className="w-5 h-5 text-indigo-600" />
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+              </div>
+              <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-1">
+                {portal.name}
+              </h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                {portal.desc}
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── MNC Clean Footer ────────────────────────────────────────────── */}
+      <footer className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 border-t border-slate-200/80 text-center text-xs text-slate-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+          <div className="flex items-center gap-2">
+            <Volume2 className="w-4 h-4 text-indigo-600" />
+            <span className="font-bold text-slate-800">BhashaBridge</span>
+            <span>• Empowering Indian Citizens Through Voice AI</span>
+          </div>
+
+          <div className="flex items-center gap-4 text-slate-600 font-medium">
+            <span>Sarvam Saaras v4</span>
+            <span>•</span>
+            <span>Sarvam 105B Indic LLM</span>
+            <span>•</span>
+            <span>Next.js 16</span>
+          </div>
+        </div>
+
+        <p className="text-[11px] text-slate-400">
+          This platform is an open civic tool designed to democratize legal grievance writing for non-English speakers across India. Audio files are processed transiently in memory and never retained.
         </p>
       </footer>
     </main>

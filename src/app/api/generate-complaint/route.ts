@@ -35,13 +35,16 @@ function cleanJson(text: string): ComplaintResponse {
 
 export async function POST(req: NextRequest) {
   try {
-    const apiKey = process.env.SARVAM_API_KEY;
+    const apiKey =
+      process.env.SARVAM_API_KEY ||
+      process.env.NEXT_PUBLIC_SARVAM_API_KEY ||
+      "sk_r2ewccoa_LIsAmFwF0G0ZPplSPWdn65Hd";
 
     if (!apiKey) {
       return NextResponse.json(
         {
           error:
-            "SARVAM_API_KEY is not configured on the server. Please add it to your environment variables or .env.local file.",
+            "SARVAM_API_KEY is not configured on the server. Please add it to your environment variables.",
         },
         { status: 500 }
       );
